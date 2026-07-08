@@ -34,3 +34,6 @@ Thumbs.db
 
 # Build scratch (unpacked design bundle)
 extracted/
+
+# Session-local preview config (absolute paths)
+.claude/launch.json
