@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="df65f22d-7a9d-4b51-9b92-0945e2aa7eed"></script>
+<script src="f8753841-5911-436d-9eea-b8e156689816"></script>
+
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <style>/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("9ab1709b-e42e-43eb-b002-2c19952bfa3e") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("bc1995ec-88c3-4109-b9e0-175e3bcc8df0") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("d3cd304a-d5ce-4dcd-ae9a-6d7f9301fd0a") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("958c39cf-01bc-45b2-952a-b6cba230c0cb") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("2fdb3485-8185-4da3-a287-1f74b56715eb") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("28d86f93-1a87-4115-9809-632d431f268b") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("e2a56f0c-c403-466e-87ba-119f0e68880b") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("9accea46-bc09-45e9-ae10-c9a3f163958c") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c3b5fdb6-23c0-40f4-b4be-107e86792999") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("bc26c495-66fb-4eb5-9fb9-be4edeafbbba") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("e2a56f0c-c403-466e-87ba-119f0e68880b") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("9accea46-bc09-45e9-ae10-c9a3f163958c") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("c3b5fdb6-23c0-40f4-b4be-107e86792999") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("bc26c495-66fb-4eb5-9fb9-be4edeafbbba") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("e2a56f0c-c403-466e-87ba-119f0e68880b") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("9accea46-bc09-45e9-ae10-c9a3f163958c") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("c3b5fdb6-23c0-40f4-b4be-107e86792999") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("bc26c495-66fb-4eb5-9fb9-be4edeafbbba") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("e2a56f0c-c403-466e-87ba-119f0e68880b") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("9accea46-bc09-45e9-ae10-c9a3f163958c") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("c3b5fdb6-23c0-40f4-b4be-107e86792999") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("bc26c495-66fb-4eb5-9fb9-be4edeafbbba") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #FBF6F0; color: #0D3A35; font-family: 'Hanken Grotesk', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #276152; }
+    a:hover { color: #0D3A35; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #276152; outline-offset: 3px; }
+    ::selection { background: #276152; color: #FBF6F0; }
+  </style>
+</helmet>
+
+<!-- ============ NAV ============ -->
+<nav data-screen-label="Nav" style="position: sticky; top: 0; z-index: 60; background: rgba(251,246,240,.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(177,183,171,.45);">
+  <div style="max-width: 1120px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+    <a href="#top" style="font-family: 'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 22px; color: #0D3A35; text-decoration: none; letter-spacing: -0.01em;">{{ brandName }}</a>
+    <a href="{{ bookingUrl }}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 22px; background: #276152; color: #FBF6F0; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 15px; box-shadow: 0 12px 24px -14px rgba(13,58,53,.5); transition: transform .18s ease, box-shadow .18s ease, background .18s ease;" style-hover="transform: translateY(-2px); box-shadow: 0 18px 32px -14px rgba(13,58,53,.55); background: #2E7260; color: #FBF6F0;">Book a call</a>
+  </div>
+</nav>
+
+<!-- ============ HERO — recognition ============ -->
+<header id="top" data-screen-label="Hero" style="position: relative; min-height: 92vh; display: flex; align-items: flex-end; background: #0D3A35; overflow: hidden;">
+  <div style="position: absolute; inset: 0;">
+    <x-import component-from-global-scope="image-slot" id="hero-photo" shape="rect" fit="cover" placeholder="Drop the business at its best — wide, warm, atmospheric. It will be darkened for text." hint-size="100%,100%" style="position: absolute; inset: 0; width: 100%; height: 100%;"></x-import>
+  </div>
+  <div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(13,58,53,.9) 0%, rgba(13,58,53,.45) 45%, rgba(13,58,53,.55) 100%);"></div>
+  <div style="position: relative; z-index: 2; width: 100%; max-width: 1120px; margin: 0 auto; padding: 140px 24px 96px; color: #FBF6F0; pointer-events: none;">
+    <p data-reveal="" data-reveal-delay="0" style="margin: 0 0 20px; font-size: 13px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #B1B7AB;">For the best-kept secret in town</p>
+    <h1 data-reveal="" data-reveal-delay="120" style="margin: 0 0 24px; font-family: 'Fraunces', serif; font-weight: 480; font-size: clamp(48px, 8.4vw, 96px); line-height: 1.02; letter-spacing: -0.025em; max-width: 12ch; text-wrap: balance;">You're better in person.</h1>
+    <p data-reveal="" data-reveal-delay="240" style="margin: 0 0 36px; font-size: clamp(17px, 2vw, 21px); line-height: 1.55; max-width: 54ch; color: rgba(251,246,240,.88); text-wrap: pretty;">So why does the internet make you look closed, dated, or hard to trust? Let's fix the first thing every customer sees — before they ever walk in.</p>
+    <div data-reveal="" data-reveal-delay="360" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; pointer-events: auto;">
+      <a href="{{ bookingUrl }}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 15px 32px; background: #276152; color: #FBF6F0; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 17px; box-shadow: 0 24px 44px -18px rgba(0,0,0,.55); transition: transform .18s ease, box-shadow .18s ease, background .18s ease;" style-hover="transform: translateY(-2px); background: #2E7260; color: #FBF6F0; box-shadow: 0 30px 50px -18px rgba(0,0,0,.6);">Book a free discovery call <span aria-hidden="true">→</span></a>
+      <a href="#pricing" style="color: rgba(251,246,240,.85); text-decoration: none; font-weight: 500; font-size: 16px; border-bottom: 1px solid rgba(177,183,171,.5); padding-bottom: 2px;" style-hover="color: #FBF6F0; border-bottom: 1px solid #FBF6F0;">See what it costs ↓</a>
+    </div>
+    <p data-reveal="" data-reveal-delay="480" style="margin: 18px 0 0; font-size: 14px; color: #B1B7AB;">15 minutes&nbsp;·&nbsp;free&nbsp;·&nbsp;no pressure</p>
+  </div>
+</header>
+
+<!-- ============ PROBLEM — sting ============ -->
+<section data-screen-label="The problem" style="position: relative; background: #FBF6F0; padding: 130px 24px 90px; overflow: hidden;">
+  <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; opacity: .045; background-image: url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22240%22%20height=%22240%22%3E%3Cfilter%20id=%22n%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%220.8%22%20numOctaves=%222%22%20stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect%20width=%22240%22%20height=%22240%22%20filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+  <div style="position: relative; max-width: 720px; margin: 0 auto;">
+    <p data-reveal="" style="margin: 0 0 18px; font-size: 13px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #276152;">How you lose a customer — in 40 seconds</p>
+    <h2 data-reveal="" data-reveal-delay="100" style="margin: 0 0 56px; font-family: 'Fraunces', serif; font-weight: 460; font-size: clamp(32px, 4.8vw, 52px); line-height: 1.08; letter-spacing: -0.02em; color: #0D3A35; text-wrap: balance;">They heard you're great. Then they looked you up.</h2>
+
+    <div style="max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px;">
+      <div data-reveal="" data-reveal-delay="0" style="align-self: flex-start; max-width: 82%; background: #FFFFFF; border: 1px solid rgba(177,183,171,.5); border-radius: 18px 18px 18px 6px; padding: 12px 17px; font-size: 15.5px; line-height: 1.45; color: #0D3A35; box-shadow: 0 8px 20px -12px rgba(13,58,53,.25);">{{ chatFriend }}</div>
+      <div data-reveal="" data-reveal-delay="280" style="align-self: flex-end; max-width: 82%; background: #276152; color: #FBF6F0; border-radius: 18px 18px 6px 18px; padding: 12px 17px; font-size: 15.5px; line-height: 1.45;">{{ chatReply }}</div>
+
+      <div data-reveal="" data-reveal-delay="620" style="align-self: flex-start; width: 88%; display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(13,58,53,.45); padding-left: 4px;">What they found</span>
+        <div style="display: flex; gap: 14px; align-items: center; background: #ECEAE4; border: 1px solid rgba(177,183,171,.6); border-radius: 14px; padding: 14px;">
+          <div style="flex: none; width: 64px; height: 64px; border-radius: 10px; background: linear-gradient(135deg, #D7D4CC, #C9C6BE); display: flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l4.5-5.5 3 3.5 2.5-3 5 5" fill="none" stroke="#8E948A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="9" cy="8" r="1.8" fill="#8E948A"></circle></svg>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0;">
+            <p style="margin: 0; font-weight: 600; font-size: 15px; color: #6E746B;">{{ cardName }}</p>
+            <p style="margin: 0; font-size: 13.5px; font-weight: 600; color: #8E948A;">{{ cardStatus }}</p>
+            <p style="margin: 0; font-size: 13px; color: #A5A399;">{{ cardMeta }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="" data-reveal-delay="1000" style="align-self: flex-end; max-width: 82%; background: #276152; color: #FBF6F0; border-radius: 18px 18px 6px 18px; padding: 12px 17px; font-size: 15.5px; line-height: 1.45;">{{ chatDoubt }}</div>
+      <p data-reveal="" data-reveal-delay="1250" style="align-self: flex-end; margin: 0; font-size: 12.5px; color: rgba(13,58,53,.45);">Seen · 6:42 PM</p>
+    </div>
+
+    <p data-reveal="" data-reveal-delay="200" style="margin: 64px auto 0; max-width: 22ch; text-align: center; font-family: 'Fraunces', serif; font-style: italic; font-weight: 440; font-size: clamp(24px, 3.4vw, 36px); line-height: 1.3; color: #0D3A35;">You never even knew they were looking.</p>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE — the transformation ============ -->
+<section data-screen-label="Signature transformation" style="position: relative; background: #FBF6F0; padding: 40px 24px 110px;">
+  <div style="max-width: 780px; margin: 0 auto; text-align: center;">
+    <p data-reveal="" style="margin: 0 0 40px; font-size: 16px; font-weight: 500; color: rgba(13,58,53,.6);">This is what they saw when they looked you up:</p>
+
+    <div id="signature-phone" data-reveal="" style="position: relative; width: min(330px, 82vw); margin: 0 auto; height: 500px; border-radius: 44px; background: #0D3A35; padding: 12px; box-shadow: 0 40px 80px -30px rgba(13,58,53,.45);">
+      <div style="position: relative; width: 100%; height: 100%; border-radius: 34px; overflow: hidden; background: #EFEDE8;">
+
+        <!-- DEAD state -->
+        <div aria-hidden="{{ deadHidden }}" style="position: absolute; inset: 0; background: #ECEAE4; opacity: {{ deadOpacity }}; transition: opacity 1.2s ease; display: flex; flex-direction: column; text-align: left;">
+          <div style="height: 44px; background: #DDDAD2; display: flex; align-items: center; padding: 0 16px; gap: 8px;">
+            <div style="width: 90px; height: 10px; border-radius: 5px; background: #B1B7AB;"></div>
+          </div>
+          <div style="height: 175px; background: linear-gradient(135deg, #D7D4CC, #C9C6BE); display: flex; align-items: center; justify-content: center;">
+            <span style="font-size: 13px; color: #8E948A; font-weight: 500;">3 photos · from 2019</span>
+          </div>
+          <div style="padding: 18px 16px; display: flex; flex-direction: column; gap: 14px;">
+            <div style="width: 70%; height: 14px; border-radius: 7px; background: #C9C6BE;"></div>
+            <p style="margin: 0; font-size: 14px; color: #8E948A;">Hours: unknown</p>
+            <p style="margin: 0; font-size: 14px; color: #8E948A;">Prices: no info</p>
+            <p style="margin: 0; font-size: 14px; color: #8E948A;">Last post: 2021</p>
+            <div style="width: 55%; height: 10px; border-radius: 5px; background: #D7D4CC;"></div>
+            <div style="width: 80%; height: 10px; border-radius: 5px; background: #D7D4CC;"></div>
+            <p style="margin: 10px 0 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 15px; color: #A5A399;">"Is this place even still open…?"</p>
+          </div>
+        </div>
+
+        <!-- ALIVE state -->
+        <div aria-hidden="{{ aliveHidden }}" style="position: absolute; inset: 0; background: #FBF6F0; opacity: {{ aliveOpacity }}; transition: opacity 1.2s ease; display: flex; flex-direction: column; text-align: left;">
+          <div style="height: 195px; position: relative; background: linear-gradient(135deg, #276152, #0D3A35);">
+            <x-import component-from-global-scope="image-slot" id="phone-photo" shape="rect" fit="cover" placeholder="Photo" hint-size="100%,195px" style="position: absolute; inset: 0; width: 100%; height: 100%;"></x-import>
+          </div>
+          <div style="padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+            <p style="margin: 0; font-family: 'Fraunces', serif; font-weight: 550; font-size: 19px; color: #0D3A35;">Hardin Verde · Garden Events</p>
+            <p style="margin: 0; display: flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 600; color: #276152;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #276152; display: inline-block;"></span>Open today · until 10 PM</p>
+            <p style="margin: 0; font-size: 14px; color: rgba(13,58,53,.7);">Packages from ₱45,000 · see rates</p>
+            <p style="margin: 0; font-size: 13.5px; color: rgba(13,58,53,.6);">Brgy. San Isidro, Tayabas · Directions</p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 12.5px; font-weight: 600; color: #276152; border: 1px solid rgba(39,97,82,.35); border-radius: 999px; padding: 5px 12px;">Gallery</span>
+              <span style="font-size: 12.5px; font-weight: 600; color: #276152; border: 1px solid rgba(39,97,82,.35); border-radius: 999px; padding: 5px 12px;">Rates</span>
+              <span style="font-size: 12.5px; font-weight: 600; color: #276152; border: 1px solid rgba(39,97,82,.35); border-radius: 999px; padding: 5px 12px;">Book a date</span>
+            </div>
+            <div style="margin-top: 6px; background: #276152; color: #FBF6F0; text-align: center; font-weight: 600; font-size: 15px; padding: 13px; border-radius: 12px; box-shadow: 0 10px 26px -8px rgba(39,97,82,.65);">Message us</div>
+            <p style="margin: 0; text-align: center; font-size: 12.5px; color: rgba(13,58,53,.55);">Replies within the day</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="margin-top: 28px; display: inline-flex; gap: 6px; padding: 5px; border: 1px solid rgba(177,183,171,.6); border-radius: 999px;">
+      <button type="button" onclick="{{ showBefore }}" style="min-height: 40px; padding: 8px 20px; border: none; border-radius: 999px; font-family: 'Hanken Grotesk', sans-serif; font-weight: 600; font-size: 14px; cursor: pointer; background: {{ beforeBg }}; color: {{ beforeFg }}; transition: background .3s ease, color .3s ease;">Before</button>
+      <button type="button" onclick="{{ showAfter }}" style="min-height: 40px; padding: 8px 20px; border: none; border-radius: 999px; font-family: 'Hanken Grotesk', sans-serif; font-weight: 600; font-size: 14px; cursor: pointer; background: {{ afterBg }}; color: {{ afterFg }}; transition: background .3s ease, color .3s ease;">After</button>
+    </div>
+    <p style="margin: 14px 0 0; font-size: 14px; color: rgba(13,58,53,.55);">Same business. Five days later.</p>
+
+    <div data-reveal="" style="max-width: 640px; margin: 90px auto 0; text-align: left;">
+      <p style="margin: 0; font-family: 'Fraunces', serif; font-style: italic; font-weight: 440; font-size: clamp(22px, 3vw, 30px); line-height: 1.42; color: #276152; text-wrap: pretty;">You're not losing them because you're not good enough. You're losing them because you're hard to find and easy to doubt. That's not a talent problem. That's a five-day fix.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VALUE TRIAD — relief ============ -->
+<section data-screen-label="Value triad" style="background: #0D3A35; color: #FBF6F0; padding: 110px 24px;">
+  <div style="max-width: 1120px; margin: 0 auto;">
+    <h2 data-reveal="" style="margin: 0 0 64px; font-family: 'Fraunces', serif; font-weight: 460; font-size: clamp(32px, 4.6vw, 52px); line-height: 1.12; letter-spacing: -0.02em; max-width: 22ch; text-wrap: balance;">You don't need more traffic. You need to keep the customers you already earn.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px;">
+      <div data-reveal="" data-reveal-delay="0" style="background: rgba(251,246,240,.05); border: 1px solid rgba(177,183,171,.25); border-radius: 20px; overflow: hidden;">
+        <div style="height: 165px; position: relative;">
+          <x-import component-from-global-scope="image-slot" id="triad-findable" shape="rect" fit="cover" placeholder="A search moment — phone in hand" hint-size="100%,165px" style="position: absolute; inset: 0; width: 100%; height: 100%;"></x-import>
+        </div>
+        <div style="padding: 24px 24px 28px;">
+          <h3 style="margin: 0 0 10px; font-family: 'Fraunces', serif; font-weight: 520; font-size: 24px;">Findable</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #B1B7AB;">Someone types your name — or "garden venue near me" — and there you are, with hours that are actually right.</p>
+        </div>
+      </div>
+      <div data-reveal="" data-reveal-delay="140" style="background: rgba(251,246,240,.05); border: 1px solid rgba(177,183,171,.25); border-radius: 20px; overflow: hidden;">
+        <div style="height: 165px; position: relative;">
+          <x-import component-from-global-scope="image-slot" id="triad-credible" shape="rect" fit="cover" placeholder="A beautiful detail — plate, table, light" hint-size="100%,165px" style="position: absolute; inset: 0; width: 100%; height: 100%;"></x-import>
+        </div>
+        <div style="padding: 24px 24px 28px;">
+          <h3 style="margin: 0 0 10px; font-family: 'Fraunces', serif; font-weight: 520; font-size: 24px;">Credible</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #B1B7AB;">One look and they know: this place is real, it's beautiful, and it's open. No doubt, no second-guessing.</p>
+        </div>
+      </div>
+      <div data-reveal="" data-reveal-delay="280" style="background: rgba(251,246,240,.05); border: 1px solid rgba(177,183,171,.25); border-radius: 20px; overflow: hidden;">
+        <div style="height: 165px; position: relative;">
+          <x-import component-from-global-scope="image-slot" id="triad-bookable" shape="rect" fit="cover" placeholder="A hand tapping 'message'" hint-size="100%,165px" style="position: absolute; inset: 0; width: 100%; height: 100%;"></x-import>
+        </div>
+        <div style="padding: 24px 24px 28px;">
+          <h3 style="margin: 0 0 10px; font-family: 'Fraunces', serif; font-weight: 520; font-size: 24px;">Bookable</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #B1B7AB;">A question becomes a message becomes a booking — while they're still interested, not next week.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHOTO BREAK — the breath ============ -->
+<section data-screen-label="Photo break" style="position: relative; height: 58vh; min-height: 380px; background: #0D3A35; overflow: hidden;">
+  <x-import component-from-global-scope="image-slot" id="break-photo" shape="rect" fit="cover" placeholder="One gorgeous full-bleed shot — morning light, steam, a set table" hint-size="100%,100%" style="position: absolute; inset: 0; width: 100%; height: 100%;"></x-import>
+  <div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(13,58,53,.55), rgba(13,58,53,.1) 40%);"></div>
+  <p style="position: absolute; left: 24px; right: 24px; bottom: 40px; margin: 0 auto; max-width: 1072px; z-index: 2; pointer-events: none; font-family: 'Fraunces', serif; font-style: italic; font-weight: 440; font-size: clamp(20px, 2.6vw, 28px); color: #FBF6F0; text-shadow: 0 2px 20px rgba(13,58,53,.6); text-align: right;">Your place already does the hard part.</p>
+</section>
+
+<!-- ============ PRICING — offer ============ -->
+<section id="pricing" data-screen-label="Pricing" style="background: #F2EADF; padding: 110px 24px 100px;">
+  <div style="max-width: 1120px; margin: 0 auto;">
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 13px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #276152;">The offer</p>
+    <h2 data-reveal="" style="margin: 0 0 14px; font-family: 'Fraunces', serif; font-weight: 460; font-size: clamp(32px, 4.6vw, 52px); line-height: 1.1; letter-spacing: -0.02em;">One price. You own it. Done.</h2>
+    <p data-reveal="" style="margin: 0 0 70px; font-size: 18px; line-height: 1.55; color: rgba(13,58,53,.7); max-width: 52ch;">No monthly fees. No rented website. Custom-coded, in your name, yours forever.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 28px; align-items: start;">
+
+      <!-- Starter -->
+      <div id="tier-starter" data-reveal="" style="background: #FBF6F0; border: 1px solid rgba(177,183,171,.5); border-radius: 24px; padding: 34px 30px; box-shadow: 0 30px 60px -28px rgba(13,58,53,.2); transition: box-shadow .25s ease;" style-hover="box-shadow: 0 34px 64px -26px rgba(13,58,53,.35);">
+        <h3 style="margin: 0 0 6px; font-size: 15px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(13,58,53,.6);">Starter</h3>
+        <p style="margin: 0 0 4px; font-family: 'Fraunces', serif; font-weight: 550; font-size: 44px; letter-spacing: -0.02em; color: #0D3A35;">₱14,500</p>
+        <p style="margin: 0 0 18px; font-size: 14px; color: rgba(13,58,53,.55);">once — or ₱1,450/mo</p>
+        <p style="margin: 0 0 22px; font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: #276152;">Get online — clean, fast, and finally real.</p>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 11px; font-size: 15.5px; line-height: 1.45; color: rgba(13,58,53,.85);">
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>One-page site, up to 3 sections</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>Mobile-fast, custom-coded</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>Tap-to-message + tap-to-call</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>Google findability basics</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>Domain included — 3 years</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>1 revision · 1 week support</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>Live in 5–7 days</li>
+        </ul>
+      </div>
+
+      <!-- Standard — flagship -->
+      <div id="tier-standard" data-reveal="" data-reveal-delay="140" style="position: relative; background: #0D3A35; color: #FBF6F0; border-radius: 24px; padding: 40px 30px 34px; transform: translateY(-16px); box-shadow: 0 44px 80px -30px rgba(13,58,53,.55); transition: box-shadow .25s ease;" style-hover="box-shadow: 0 52px 90px -30px rgba(13,58,53,.65);">
+        <span style="position: absolute; top: -14px; left: 30px; background: #276152; color: #FBF6F0; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; padding: 7px 16px; border-radius: 999px; box-shadow: 0 10px 20px -8px rgba(13,58,53,.6);">Most chosen</span>
+        <h3 style="margin: 0 0 6px; font-size: 15px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #B1B7AB;">Standard</h3>
+        <p style="margin: 0 0 4px; font-family: 'Fraunces', serif; font-weight: 550; font-size: 48px; letter-spacing: -0.02em;">₱30,500</p>
+        <p style="margin: 0 0 18px; font-size: 14px; color: #B1B7AB;">once — or from ₱3,050/mo</p>
+        <p style="margin: 0 0 22px; font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: #B1B7AB;">The one that actually captures customers.</p>
+        <p style="margin: 0 0 12px; font-size: 14px; font-weight: 600; color: #B1B7AB;">Everything in Starter, plus:</p>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 11px; font-size: 15.5px; line-height: 1.45; color: rgba(251,246,240,.92);">
+          <li style="display: flex; gap: 10px;"><span style="color: #7FAF9F; font-weight: 700;">✓</span>Up to 6 sections</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #7FAF9F; font-weight: 700;">✓</span>Inquiry + booking form</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #7FAF9F; font-weight: 700;">✓</span>Reviews wall + photo gallery</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #7FAF9F; font-weight: 700;">✓</span>Google Business Profile setup</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #7FAF9F; font-weight: 700;">✓</span>Visitor analytics</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #7FAF9F; font-weight: 700;">✓</span>2 revisions · 1 month support</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #7FAF9F; font-weight: 700;">✓</span>Live in 5–7 days</li>
+        </ul>
+        <a href="{{ bookingUrl }}" style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 26px; min-height: 50px; background: #276152; color: #FBF6F0; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 16px; transition: transform .18s ease, background .18s ease;" style-hover="transform: translateY(-2px); background: #2E7260; color: #FBF6F0;">Start with a free call <span aria-hidden="true">→</span></a>
+      </div>
+
+      <!-- Premium -->
+      <div id="tier-premium" data-reveal="" data-reveal-delay="280" style="background: #FBF6F0; border: 1px solid rgba(177,183,171,.5); border-radius: 24px; padding: 34px 30px; box-shadow: 0 30px 60px -28px rgba(13,58,53,.2); transition: box-shadow .25s ease;" style-hover="box-shadow: 0 34px 64px -26px rgba(13,58,53,.35);">
+        <h3 style="margin: 0 0 6px; font-size: 15px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(13,58,53,.6);">Premium</h3>
+        <p style="margin: 0 0 4px; font-family: 'Fraunces', serif; font-weight: 550; font-size: 44px; letter-spacing: -0.02em; color: #0D3A35;">₱52,500</p>
+        <p style="margin: 0 0 18px; font-size: 14px; color: rgba(13,58,53,.55);">once — or ₱5,250/mo</p>
+        <p style="margin: 0 0 22px; font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: #276152;">The full capture engine, done for you.</p>
+        <p style="margin: 0 0 12px; font-size: 14px; font-weight: 600; color: rgba(13,58,53,.55);">Everything in Standard, plus:</p>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 11px; font-size: 15.5px; line-height: 1.45; color: rgba(13,58,53,.85);">
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>Live booking calendar</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>Priority build</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>Photo + copy polish</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>Findability optimization pass</li>
+          <li style="display: flex; gap: 10px;"><span style="color: #276152; font-weight: 700;">✓</span>3 revisions · 3 months support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div data-reveal="" style="margin-top: 56px; display: flex; flex-direction: column; gap: 14px; max-width: 720px;">
+      <p style="margin: 0; font-size: 16.5px; line-height: 1.55; color: rgba(13,58,53,.8);">Every plan can be split over 4, 6, or 10 months — <strong>0% interest</strong>, same price — just split so it's easier to start.</p>
+      <p style="margin: 0; font-size: 14.5px; color: rgba(13,58,53,.55);">After year 3: about ₱1,500/year for the domain — registered in your own name, not mine.</p>
+    </div>
+
+    <div data-reveal="" style="margin-top: 36px; display: flex; align-items: center; gap: 16px; border: 1px solid rgba(39,97,82,.35); background: rgba(39,97,82,.06); border-radius: 16px; padding: 20px 24px;">
+      <span aria-hidden="true" style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #276152; display: flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l5 5 9-11" fill="none" stroke="#FBF6F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+      <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #0D3A35;"><strong>Every tier:</strong> rebuild till you're happy, or your money back. All of it. <a href="#guarantee" style="font-weight: 600;">The guarantee ↓</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER BELIEF ============ -->
+<section data-screen-label="Founder belief" style="position: relative; background: #FBF6F0; padding: 170px 24px; overflow: hidden;">
+  <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; opacity: .045; background-image: url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22240%22%20height=%22240%22%3E%3Cfilter%20id=%22n%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%220.8%22%20numOctaves=%222%22%20stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect%20width=%22240%22%20height=%22240%22%20filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+  <svg aria-hidden="true" width="640" height="640" viewBox="0 0 640 640" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: .5; pointer-events: none;">
+    <ellipse cx="320" cy="320" rx="300" ry="210" fill="none" stroke="#B1B7AB" transform="rotate(-7 320 320)"></ellipse>
+    <ellipse cx="320" cy="320" rx="245" ry="165" fill="none" stroke="#B1B7AB" transform="rotate(-4 320 320)"></ellipse>
+    <ellipse cx="320" cy="320" rx="190" ry="122" fill="none" stroke="#B1B7AB" transform="rotate(-1 320 320)"></ellipse>
+    <ellipse cx="320" cy="320" rx="135" ry="82" fill="none" stroke="#B1B7AB" transform="rotate(2 320 320)"></ellipse>
+  </svg>
+  <div data-reveal="" style="position: relative; max-width: 820px; margin: 0 auto; text-align: center;">
+    <p style="margin: 0 0 40px; font-size: 13px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #276152;">Why I do this</p>
+    <blockquote style="margin: 0; font-family: 'Fraunces', serif; font-style: italic; font-weight: 420; font-size: clamp(26px, 4vw, 44px); line-height: 1.4; letter-spacing: -0.01em; color: #0D3A35; text-wrap: pretty;">The best place in town shouldn't lose to a worse one just because it's easier to find online. I've watched it happen — a great little spot, better than the competition in every way that matters, quietly losing customers because the internet makes it look closed, dated, or fake. That's the whole reason I do this.</blockquote>
+    <div style="margin-top: 48px; display: flex; align-items: center; justify-content: center; gap: 16px;">
+      <x-import component-from-global-scope="image-slot" id="founder-photo" shape="circle" fit="cover" placeholder="" hint-size="88px,88px" style="width: 88px; height: 88px; flex: none;"></x-import>
+      <div style="text-align: left;">
+        <p style="margin: 0; font-family: 'Fraunces', serif; font-weight: 550; font-size: 19px; color: #0D3A35;">— [Founder name]</p>
+        <p style="margin: 2px 0 0; font-size: 14px; color: rgba(13,58,53,.6);">I build it — and I'm the one you talk to.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAY ONCE VS SUBSCRIPTION ============ -->
+<section data-screen-label="Pay once vs subscription" style="background: #0D3A35; color: #FBF6F0; padding: 110px 24px;">
+  <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <h2 data-reveal="" style="margin: 0 0 70px; font-family: 'Fraunces', serif; font-weight: 460; font-size: clamp(30px, 4.4vw, 48px); line-height: 1.12; letter-spacing: -0.02em; text-wrap: balance;">Renting a website never ends.<br>Owning one does.</h2>
+
+    <div style="display: flex; flex-direction: column; gap: 40px; text-align: left;">
+
+      <!-- RENTING stream -->
+      <div data-reveal="" style="border: 1px solid rgba(177,183,171,.3); border-radius: 20px; padding: 28px 28px 26px;">
+        <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 20px;">
+          <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #B1B7AB;">Renting — ₱2,000/month</p>
+          <p style="margin: 0; font-family: 'Fraunces', serif; font-weight: 550; font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.02em; color: #B1B7AB;"><span data-countup="72000" data-prefix="₱">₱72,000</span><span style="font-family: 'Hanken Grotesk', sans-serif; font-size: 15px; font-weight: 500; color: rgba(177,183,171,.8); white-space: nowrap;">&nbsp;…and counting</span></p>
+        </div>
+        <div data-stream="" style="display: flex; align-items: center; gap: 4px; overflow: hidden;">
+          <sc-for list="{{ rentTicks }}" as="t" hint-placeholder-count="36">
+            <span style="flex: 1 1 0; min-width: 3px; height: 26px; border-radius: 2px; background: rgba(177,183,171,.55);"></span>
+          </sc-for>
+          <span style="flex: none; padding-left: 10px; font-size: 15px; font-weight: 600; color: rgba(177,183,171,.8); white-space: nowrap;">forever →</span>
+        </div>
+        <p style="margin: 16px 0 0; font-size: 15px; color: rgba(251,246,240,.7);">Stop paying → your website disappears. You own nothing.</p>
+      </div>
+
+      <!-- OWNING stream -->
+      <div data-reveal="" data-reveal-delay="180" style="background: rgba(39,97,82,.25); border: 1px solid rgba(127,175,159,.5); border-radius: 20px; padding: 28px 28px 26px; box-shadow: 0 30px 60px -28px rgba(0,0,0,.5);">
+        <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 20px;">
+          <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #7FAF9F;">Owning — pay once</p>
+          <p style="margin: 0; font-family: 'Fraunces', serif; font-weight: 550; font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.02em; color: #FBF6F0;"><span data-countup="30500" data-prefix="₱">₱30,500</span><span style="font-family: 'Hanken Grotesk', sans-serif; font-size: 15px; font-weight: 500; color: #7FAF9F; white-space: nowrap;">&nbsp;— done</span></p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="flex: none; width: 22%; min-width: 90px; height: 26px; border-radius: 6px; background: #7FAF9F; box-shadow: 0 8px 20px -8px rgba(127,175,159,.6);"></span>
+          <span style="flex: 1; height: 2px; background: rgba(127,175,159,.25); border-radius: 1px;"></span>
+          <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; font-size: 15px; font-weight: 600; color: #7FAF9F; white-space: nowrap;"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l5 5 9-11" fill="none" stroke="#7FAF9F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>yours forever</span>
+        </div>
+        <p style="margin: 16px 0 0; font-size: 15px; color: rgba(251,246,240,.85);">Code + domain in your name. After year 3: ~₱1,500/yr for the domain. That's it.</p>
+      </div>
+    </div>
+
+    <p data-reveal="" style="margin: 56px auto 0; max-width: 30ch; font-family: 'Fraunces', serif; font-style: italic; font-weight: 440; font-size: clamp(22px, 3vw, 30px); line-height: 1.35; color: #FBF6F0;">Same three years. ₱41,500 apart — and only one is yours.</p>
+  </div>
+</section>
+
+<!-- ============ GUARANTEE ============ -->
+<section id="guarantee" data-screen-label="Guarantee" style="background: #FBF6F0; padding: 130px 24px;">
+  <div data-reveal="" style="max-width: 680px; margin: 0 auto; text-align: center;">
+    <span aria-hidden="true" style="display: inline-flex; width: 64px; height: 64px; border-radius: 50%; background: #276152; align-items: center; justify-content: center; box-shadow: 0 20px 40px -16px rgba(39,97,82,.6); margin-bottom: 32px;"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l5 5 9-11" fill="none" stroke="#FBF6F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+    <h2 style="margin: 0 0 22px; font-family: 'Fraunces', serif; font-weight: 460; font-size: clamp(32px, 4.6vw, 52px); line-height: 1.1; letter-spacing: -0.02em;">If you don't love it, you don't keep it.</h2>
+    <p style="margin: 0; font-size: clamp(17px, 2vw, 20px); line-height: 1.6; color: rgba(13,58,53,.75); text-wrap: pretty;">I'll rebuild it until you're happy — or I give your money back. In full. The risk is mine to carry, not yours.</p>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section data-screen-label="Trust signals" style="background: #F2EADF; padding: 100px 24px;">
+  <div style="max-width: 1120px; margin: 0 auto;">
+    <h2 data-reveal="" style="margin: 0 0 12px; font-family: 'Fraunces', serif; font-weight: 460; font-size: clamp(28px, 4vw, 44px); line-height: 1.12; letter-spacing: -0.02em;">Why trust a stranger from the internet?</h2>
+    <p data-reveal="" style="margin: 0 0 56px; font-size: 17px; color: rgba(13,58,53,.65);">Fair question. Here's the honest answer.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+      <div data-reveal="" data-reveal-delay="0" style="background: #FBF6F0; border: 1px solid rgba(177,183,171,.45); border-radius: 18px; padding: 26px;">
+        <h3 style="margin: 0 0 8px; font-family: 'Fraunces', serif; font-weight: 540; font-size: 20px; color: #0D3A35;">Custom-coded</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(13,58,53,.7);">No templates, no page builders. Built by hand to load fast on the phones your customers actually use.</p>
+      </div>
+      <div data-reveal="" data-reveal-delay="100" style="background: #FBF6F0; border: 1px solid rgba(177,183,171,.45); border-radius: 18px; padding: 26px;">
+        <h3 style="margin: 0 0 8px; font-family: 'Fraunces', serif; font-weight: 540; font-size: 20px; color: #0D3A35;">You own everything</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(13,58,53,.7);">The code, the domain, the content — all in your name, not mine. No hostage situation.</p>
+      </div>
+      <div data-reveal="" data-reveal-delay="200" style="background: #FBF6F0; border: 1px solid rgba(177,183,171,.45); border-radius: 18px; padding: 26px;">
+        <h3 style="margin: 0 0 8px; font-family: 'Fraunces', serif; font-weight: 540; font-size: 20px; color: #0D3A35;">Local</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(13,58,53,.7);">From here, not a faceless agency abroad. We can meet over coffee — talk first, money later.</p>
+      </div>
+      <div data-reveal="" data-reveal-delay="300" style="background: #FBF6F0; border: 1px solid rgba(177,183,171,.45); border-radius: 18px; padding: 26px;">
+        <h3 style="margin: 0 0 8px; font-family: 'Fraunces', serif; font-weight: 540; font-size: 20px; color: #0D3A35;">Live in a week</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(13,58,53,.7);">From "yes" to live: 5–7 days. Not one of those projects that drags on for six months.</p>
+      </div>
+    </div>
+    <div data-reveal="" style="margin-top: 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+      <span style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(39,97,82,.4); color: #276152; font-weight: 600; font-size: 14px; border-radius: 999px; padding: 9px 18px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #276152; display: inline-block;"></span>I take 2 builds a month — so nothing gets rushed.</span>
+    </div>
+    <div data-reveal="" style="margin-top: 28px; border: 1.5px dashed rgba(177,183,171,.8); border-radius: 18px; padding: 28px; max-width: 720px;">
+      <p style="margin: 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 17px; line-height: 1.6; color: rgba(13,58,53,.5);">[ Reserved for the first client's real words. No invented testimonials here — when the first client is happy, what they actually say goes in this spot. ]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BREATH ============ -->
+<div aria-hidden="true" style="background: #FBF6F0; height: 180px;"></div>
+
+<!-- ============ FINAL CTA ============ -->
+<section data-screen-label="Final CTA" style="background: #0D3A35; color: #FBF6F0; padding: 130px 24px;">
+  <div data-reveal="" style="max-width: 720px; margin: 0 auto; text-align: center;">
+    <h2 style="margin: 0 0 24px; font-family: 'Fraunces', serif; font-weight: 460; font-size: clamp(38px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.02em;">Let's just talk.</h2>
+    <p style="margin: 0 auto 40px; font-size: clamp(17px, 2vw, 20px); line-height: 1.6; color: rgba(251,246,240,.85); max-width: 46ch; text-wrap: pretty;">I'll show you a real mockup of your own business — free, before you decide anything. If it's not for you, no hard feelings — you lose nothing by asking.</p>
+    <a href="{{ bookingUrl }}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 16px 36px; background: #276152; color: #FBF6F0; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 18px; box-shadow: 0 26px 50px -20px rgba(0,0,0,.6); transition: transform .18s ease, background .18s ease, box-shadow .18s ease;" style-hover="transform: translateY(-2px); background: #2E7260; color: #FBF6F0; box-shadow: 0 32px 56px -20px rgba(0,0,0,.65);">Book a free discovery call <span aria-hidden="true">→</span></a>
+    <p style="margin: 20px 0 0; font-size: 14px; color: #B1B7AB;">15 minutes&nbsp;·&nbsp;free&nbsp;·&nbsp;no pressure</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer data-screen-label="Footer" style="background: #0A2B27; color: #B1B7AB; padding: 44px 24px;">
+  <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+    <p style="margin: 0; font-family: 'Fraunces', serif; font-style: italic; font-size: 19px; color: #FBF6F0;">{{ brandName }}</p>
+    <p style="margin: 0; font-size: 14px;">Custom websites for the best-kept secrets of Quezon &amp; Batangas.</p>
+    <p style="margin: 0; font-size: 14px;"><a href="{{ bookingUrl }}" style="color: #B1B7AB;" style-hover="color: #FBF6F0;">Message me</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="tel:+639000000000" style="color: #B1B7AB;" style-hover="color: #FBF6F0;">0900 000 0000</a></p>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{
+  &quot;brandName&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;studio&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Brand&quot; },
+  &quot;bookingUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://m.me/yourpage&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Brand&quot; },
+  &quot;storyIndustry&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;venue&quot;, &quot;cafe&quot;, &quot;clinic&quot;], &quot;default&quot;: &quot;venue&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Copy&quot; }
+}">
+class Component extends DCLogic {
+  state = { alive: false };
+
+  componentDidMount() {
+    if (this._did) return;
+    this._did = true;
+
+    // Flagship first on mobile
+    const mq = window.matchMedia('(max-width: 760px)');
+    const applyOrder = () => {
+      const std = document.getElementById('tier-standard');
+      const start = document.getElementById('tier-starter');
+      if (std) {
+        std.style.order = mq.matches ? '-1' : '0';
+        std.style.transform = mq.matches ? 'none' : 'translateY(-16px)';
+      }
+      if (start) start.style.order = '0';
+    };
+    mq.addEventListener('change', applyOrder);
+    applyOrder();
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) {
+      // Content in final state; signature shows alive with manual toggle.
+      this.setState({ alive: true });
+      return;
+    }
+
+    // Scroll reveals
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const d = parseInt(el.getAttribute('data-reveal-delay') || '0', 10);
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, d);
+        io.unobserve(el);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(26px)';
+      el.style.transition = 'opacity .7s ease, transform .7s ease';
+      io.observe(el);
+    });
+
+    // Rent stream: ticks drip in one by one
+    const stream = document.querySelector('[data-stream]');
+    if (stream) {
+      const kids = Array.from(stream.children);
+      kids.forEach((k) => { k.style.opacity = '0'; k.style.transition = 'opacity .3s ease'; });
+      const ioS = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          ioS.unobserve(stream);
+          kids.forEach((k, i) => setTimeout(() => { k.style.opacity = '1'; }, 200 + i * 40));
+        });
+      }, { threshold: 0.5 });
+      ioS.observe(stream);
+    }
+
+    // Count-ups
+    const counts = Array.from(document.querySelectorAll('[data-countup]'));
+    const io2 = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        io2.unobserve(el);
+        const target = parseInt(el.getAttribute('data-countup'), 10);
+        const prefix = el.getAttribute('data-prefix') || '';
+        const t0 = performance.now();
+        const dur = 1400;
+        const tick = (t) => {
+          const p = Math.min(1, (t - t0) / dur);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = prefix + Math.round(target * eased).toLocaleString('en-PH');
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    counts.forEach((el) => io2.observe(el));
+
+    // Signature transformation: dead -> alive on scroll into view
+    const phone = document.getElementById('signature-phone');
+    if (phone) {
+      const io3 = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          io3.unobserve(phone);
+          setTimeout(() => this.setState({ alive: true }), 900);
+        });
+      }, { threshold: 0.55 });
+      io3.observe(phone);
+    }
+  }
+
+  renderVals() {
+    const industry = this.props.storyIndustry ?? 'venue';
+    const stories = {
+      venue: {
+        friend: 'you HAVE to see the garden venue in Tayabas 😍 perfect for your wedding, promise',
+        reply: 'omg checking!!',
+        cardName: 'Hardin Verde · Garden Events',
+        cardStatus: 'Possibly closed',
+        cardMeta: '3 photos · from 2019 · no prices',
+        doubt: "looks closed?? let's just book the one in Lucena 😕"
+      },
+      cafe: {
+        friend: 'you HAVE to try the café near the plaza ☕ best in town, promise',
+        reply: 'searching!',
+        cardName: 'Café ni Aling Nena',
+        cardStatus: 'Hours unknown',
+        cardMeta: 'Last photo · Dec 2023 · no menu',
+        doubt: "I don't think it's open anymore… coffee shop by the mall instead? 😕"
+      },
+      clinic: {
+        friend: 'the pedia clinic near the plaza is great, the doctor is so gentle 🙏',
+        reply: 'will check!',
+        cardName: 'Sunshine Pediatric Clinic',
+        cardStatus: 'No schedule listed',
+        cardMeta: 'Page updated 2022 · no booking',
+        doubt: "can't book online though… I'll just try the other clinic 😕"
+      }
+    };
+    const story = stories[industry] || stories.venue;
+
+    const alive = this.state.alive;
+    return {
+      brandName: this.props.brandName ?? 'studio',
+      bookingUrl: this.props.bookingUrl ?? 'https://m.me/yourpage',
+      rentTicks: Array.from({ length: 36 }, (_, i) => ({ i })),
+      chatFriend: story.friend,
+      chatReply: story.reply,
+      cardName: story.cardName,
+      cardStatus: story.cardStatus,
+      cardMeta: story.cardMeta,
+      chatDoubt: story.doubt,
+      deadOpacity: alive ? 0 : 1,
+      aliveOpacity: alive ? 1 : 0,
+      deadHidden: alive ? 'true' : 'false',
+      aliveHidden: alive ? 'false' : 'true',
+      showBefore: () => this.setState({ alive: false }),
+      showAfter: () => this.setState({ alive: true }),
+      beforeBg: alive ? 'transparent' : '#0D3A35',
+      beforeFg: alive ? '#0D3A35' : '#FBF6F0',
+      afterBg: alive ? '#276152' : 'transparent',
+      afterFg: alive ? '#FBF6F0' : '#0D3A35'
+    };
+  }
+}
+</script>
+
+
+</body></html>

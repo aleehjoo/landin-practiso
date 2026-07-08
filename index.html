@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Found — Custom websites for the best-kept secrets of Quezon &amp; Batangas</title>
+  <meta name="description" content="Your place is better in person. Let's fix the first thing every customer sees online — a custom-coded website you own, live in 5–7 days.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="You're better in person.">
+  <meta property="og:description" content="So why does the internet make you look closed, dated, or hard to trust? Let's fix the first thing every customer sees.">
+  <meta name="theme-color" content="#0D3A35">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav" data-screen-label="Nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand" data-brand>studio</a>
+    <a href="#book" class="btn btn--pill" data-book>Book a call</a>
+  </div>
+</nav>
+
+<!-- ============ HERO — recognition ============ -->
+<header id="top" class="hero" data-screen-label="Hero">
+  <div class="hero__media">
+    <img class="hero__photo" src="assets/img/hero.webp" alt="A garden events venue glowing at golden hour, tables set beneath the trees." fetchpriority="high" decoding="async">
+  </div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="hero__eyebrow reveal" data-reveal data-reveal-delay="0">For the best-kept secret in town</p>
+    <h1 class="hero__title reveal" data-reveal data-reveal-delay="120">You're better in person.</h1>
+    <p class="hero__lede reveal" data-reveal data-reveal-delay="240">So why does the internet make you look closed, dated, or hard to trust? Let's fix the first thing every customer sees — before they ever walk in.</p>
+    <div class="hero__actions reveal" data-reveal data-reveal-delay="360">
+      <a href="#book" class="btn btn--lg btn--arrow" data-book>Book a free discovery call <span class="btn__arrow" aria-hidden="true">→</span></a>
+      <a href="#pricing" class="hero__link">See what it costs ↓</a>
+    </div>
+    <p class="hero__note reveal" data-reveal data-reveal-delay="480">15 minutes&nbsp;·&nbsp;free&nbsp;·&nbsp;no pressure</p>
+  </div>
+  <a href="#problem" class="hero__cue" aria-label="Scroll down"><span></span></a>
+</header>
+
+<!-- ============ PROBLEM — sting ============ -->
+<section id="problem" class="problem" data-screen-label="The problem">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="problem__inner">
+    <p class="eyebrow eyebrow--green reveal" data-reveal>How you lose a customer — in 40 seconds</p>
+    <h2 class="problem__title reveal" data-reveal data-reveal-delay="100">They heard you're great. Then they looked you up.</h2>
+
+    <div class="chat" id="chat" aria-label="A text conversation between two friends">
+      <div class="chat__bubble chat__bubble--in reveal" data-reveal data-reveal-delay="0">you HAVE to see the garden venue in Tayabas 😍 perfect for your wedding, promise</div>
+      <div class="chat__bubble chat__bubble--out reveal" data-reveal data-reveal-delay="280">omg checking!!</div>
+
+      <div class="chat__found reveal" data-reveal data-reveal-delay="620">
+        <span class="chat__found-label">What they found</span>
+        <div class="listing">
+          <div class="listing__thumb" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 17l4.5-5.5 3 3.5 2.5-3 5 5" fill="none" stroke="#8E948A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="9" cy="8" r="1.8" fill="#8E948A"></circle></svg>
+          </div>
+          <div class="listing__body">
+            <p class="listing__name">Hardin Verde · Garden Events</p>
+            <p class="listing__status">Possibly closed</p>
+            <p class="listing__meta">3 photos · from 2019 · no prices</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- typing indicator is injected here by JS before the doubt reply -->
+      <div class="chat__bubble chat__bubble--out reveal" data-reveal data-reveal-delay="1000" data-doubt>looks closed?? let's just book the one in Lucena 😕</div>
+      <p class="chat__seen reveal" data-reveal data-reveal-delay="1250">Seen · 6:42 PM</p>
+    </div>
+
+    <p class="problem__kicker reveal" data-reveal data-reveal-delay="200">You never even knew they were looking.</p>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE — the transformation ============ -->
+<section class="signature" data-screen-label="Signature transformation">
+  <div class="signature__inner">
+    <p class="signature__intro reveal" data-reveal>This is what they saw when they looked you up:</p>
+
+    <div class="phone" id="signature-phone" data-reveal>
+      <div class="phone__screen">
+
+        <!-- DEAD state -->
+        <div class="phone__state phone__state--dead" data-phone-dead>
+          <div class="deadcard__bar"><span></span></div>
+          <div class="deadcard__hero"><span>3 photos · from 2019</span></div>
+          <div class="deadcard__body">
+            <div class="deadcard__line deadcard__line--title"></div>
+            <p>Hours: unknown</p>
+            <p>Prices: no info</p>
+            <p>Last post: 2021</p>
+            <div class="deadcard__line deadcard__line--sm"></div>
+            <div class="deadcard__line deadcard__line--md"></div>
+            <p class="deadcard__quote">"Is this place even still open…?"</p>
+          </div>
+        </div>
+
+        <!-- ALIVE state -->
+        <div class="phone__state phone__state--alive" data-phone-alive aria-hidden="true">
+          <div class="livecard__hero">
+            <img src="assets/img/phone.webp" alt="The garden venue entrance lit with lanterns at dusk." loading="lazy" decoding="async">
+          </div>
+          <div class="livecard__body">
+            <p class="livecard__name">Hardin Verde · Garden Events</p>
+            <p class="livecard__open"><span class="dot"></span>Open today · until 10 PM</p>
+            <p class="livecard__row">Packages from ₱45,000 · see rates</p>
+            <p class="livecard__row livecard__row--muted">Brgy. San Isidro, Tayabas · Directions</p>
+            <div class="livecard__chips">
+              <span>Gallery</span><span>Rates</span><span>Book a date</span>
+            </div>
+            <div class="livecard__cta">Message us</div>
+            <p class="livecard__reply">Replies within the day</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="toggle" role="group" aria-label="Before and after">
+      <button type="button" class="toggle__btn is-active" data-toggle="before">Before</button>
+      <button type="button" class="toggle__btn" data-toggle="after">After</button>
+    </div>
+    <p class="signature__caption">Same business. Five days later.</p>
+
+    <div class="signature__note reveal" data-reveal>
+      <p>You're not losing them because you're not good enough. You're losing them because you're hard to find and easy to doubt. That's not a talent problem. That's a five-day fix.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VALUE TRIAD — relief ============ -->
+<section class="triad" data-screen-label="Value triad">
+  <div class="triad__inner">
+    <h2 class="triad__title reveal" data-reveal>You don't need more traffic. You need to keep the customers you already earn.</h2>
+    <div class="triad__grid">
+      <article class="tcard reveal" data-reveal data-reveal-delay="0">
+        <div class="tcard__media"><img src="assets/img/findable.webp" alt="Hands holding a phone, searching for a place nearby." loading="lazy" decoding="async"></div>
+        <div class="tcard__body">
+          <h3 class="tcard__title">Findable</h3>
+          <p class="tcard__text">Someone types your name — or "garden venue near me" — and there you are, with hours that are actually right.</p>
+        </div>
+      </article>
+      <article class="tcard reveal" data-reveal data-reveal-delay="140">
+        <div class="tcard__media"><img src="assets/img/credible.webp" alt="A beautifully plated dish in warm daylight." loading="lazy" decoding="async"></div>
+        <div class="tcard__body">
+          <h3 class="tcard__title">Credible</h3>
+          <p class="tcard__text">One look and they know: this place is real, it's beautiful, and it's open. No doubt, no second-guessing.</p>
+        </div>
+      </article>
+      <article class="tcard reveal" data-reveal data-reveal-delay="280">
+        <div class="tcard__media"><img src="assets/img/bookable.webp" alt="A thumb tapping message on a phone." loading="lazy" decoding="async"></div>
+        <div class="tcard__body">
+          <h3 class="tcard__title">Bookable</h3>
+          <p class="tcard__text">A question becomes a message becomes a booking — while they're still interested, not next week.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHOTO BREAK — the breath ============ -->
+<section class="break" data-screen-label="Photo break">
+  <img class="break__photo" src="assets/img/break.webp" alt="A single table set in the garden, morning light through the leaves." loading="lazy" decoding="async">
+  <div class="break__scrim" aria-hidden="true"></div>
+  <p class="break__line">Your place already does the hard part.</p>
+</section>
+
+<!-- ============ PRICING — offer ============ -->
+<section id="pricing" class="pricing" data-screen-label="Pricing">
+  <div class="pricing__inner">
+    <p class="eyebrow eyebrow--green reveal" data-reveal>The offer</p>
+    <h2 class="pricing__title reveal" data-reveal>One price. You own it. Done.</h2>
+    <p class="pricing__lede reveal" data-reveal>No monthly fees. No rented website. Custom-coded, in your name, yours forever.</p>
+
+    <div class="pricing__grid">
+
+      <!-- Starter -->
+      <div class="tier reveal" id="tier-starter" data-reveal>
+        <h3 class="tier__name">Starter</h3>
+        <p class="tier__price">₱14,500</p>
+        <p class="tier__sub">once — or ₱1,450/mo</p>
+        <p class="tier__promise">Get online — clean, fast, and finally real.</p>
+        <ul class="tier__list">
+          <li><span class="tick">✓</span>One-page site, up to 3 sections</li>
+          <li><span class="tick">✓</span>Mobile-fast, custom-coded</li>
+          <li><span class="tick">✓</span>Tap-to-message + tap-to-call</li>
+          <li><span class="tick">✓</span>Google findability basics</li>
+          <li><span class="tick">✓</span>Domain included — 3 years</li>
+          <li><span class="tick">✓</span>1 revision · 1 week support</li>
+          <li><span class="tick">✓</span>Live in 5–7 days</li>
+        </ul>
+      </div>
+
+      <!-- Standard — flagship -->
+      <div class="tier tier--flagship reveal" id="tier-standard" data-reveal data-reveal-delay="140">
+        <span class="tier__badge">Most chosen</span>
+        <h3 class="tier__name tier__name--light">Standard</h3>
+        <p class="tier__price tier__price--light">₱30,500</p>
+        <p class="tier__sub tier__sub--light">once — or from ₱3,050/mo</p>
+        <p class="tier__promise tier__promise--light">The one that actually captures customers.</p>
+        <p class="tier__plus">Everything in Starter, plus:</p>
+        <ul class="tier__list tier__list--light">
+          <li><span class="tick tick--light">✓</span>Up to 6 sections</li>
+          <li><span class="tick tick--light">✓</span>Inquiry + booking form</li>
+          <li><span class="tick tick--light">✓</span>Reviews wall + photo gallery</li>
+          <li><span class="tick tick--light">✓</span>Google Business Profile setup</li>
+          <li><span class="tick tick--light">✓</span>Visitor analytics</li>
+          <li><span class="tick tick--light">✓</span>2 revisions · 1 month support</li>
+          <li><span class="tick tick--light">✓</span>Live in 5–7 days</li>
+        </ul>
+        <a href="#book" class="btn btn--block btn--arrow" data-book>Start with a free call <span class="btn__arrow" aria-hidden="true">→</span></a>
+      </div>
+
+      <!-- Premium -->
+      <div class="tier reveal" id="tier-premium" data-reveal data-reveal-delay="280">
+        <h3 class="tier__name">Premium</h3>
+        <p class="tier__price">₱52,500</p>
+        <p class="tier__sub">once — or ₱5,250/mo</p>
+        <p class="tier__promise">The full capture engine, done for you.</p>
+        <p class="tier__plus tier__plus--dark">Everything in Standard, plus:</p>
+        <ul class="tier__list">
+          <li><span class="tick">✓</span>Live booking calendar</li>
+          <li><span class="tick">✓</span>Priority build</li>
+          <li><span class="tick">✓</span>Photo + copy polish</li>
+          <li><span class="tick">✓</span>Findability optimization pass</li>
+          <li><span class="tick">✓</span>3 revisions · 3 months support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pricing__terms reveal" data-reveal>
+      <p>Every plan can be split over 4, 6, or 10 months — <strong>0% interest</strong>, same price — just split so it's easier to start.</p>
+      <p class="pricing__terms-fine">After year 3: about ₱1,500/year for the domain — registered in your own name, not mine.</p>
+    </div>
+
+    <div class="pricing__guarantee reveal" data-reveal>
+      <span class="pricing__guarantee-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 12.5l5 5 9-11" fill="none" stroke="#FBF6F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+      <p><strong>Every tier:</strong> rebuild till you're happy, or your money back. All of it. <a href="#guarantee">The guarantee ↓</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER BELIEF ============ -->
+<section class="founder" data-screen-label="Founder belief">
+  <div class="grain" aria-hidden="true"></div>
+  <svg class="founder__orbits" aria-hidden="true" width="640" height="640" viewBox="0 0 640 640">
+    <ellipse cx="320" cy="320" rx="300" ry="210" fill="none" stroke="#B1B7AB" transform="rotate(-7 320 320)"></ellipse>
+    <ellipse cx="320" cy="320" rx="245" ry="165" fill="none" stroke="#B1B7AB" transform="rotate(-4 320 320)"></ellipse>
+    <ellipse cx="320" cy="320" rx="190" ry="122" fill="none" stroke="#B1B7AB" transform="rotate(-1 320 320)"></ellipse>
+    <ellipse cx="320" cy="320" rx="135" ry="82" fill="none" stroke="#B1B7AB" transform="rotate(2 320 320)"></ellipse>
+  </svg>
+  <div class="founder__inner reveal" data-reveal>
+    <p class="eyebrow eyebrow--green">Why I do this</p>
+    <blockquote class="founder__quote">The best place in town shouldn't lose to a worse one just because it's easier to find online. I've watched it happen — a great little spot, better than the competition in every way that matters, quietly losing customers because the internet makes it look closed, dated, or fake. That's the whole reason I do this.</blockquote>
+    <div class="founder__by">
+      <img class="founder__photo" src="assets/img/founder.webp" alt="Portrait of the founder." loading="lazy" decoding="async">
+      <div class="founder__meta">
+        <p class="founder__name" data-founder>— [Founder name]</p>
+        <p class="founder__role">I build it — and I'm the one you talk to.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAY ONCE VS SUBSCRIPTION ============ -->
+<section class="ownership" data-screen-label="Pay once vs subscription">
+  <div class="ownership__inner">
+    <h2 class="ownership__title reveal" data-reveal>Renting a website never ends.<br>Owning one does.</h2>
+
+    <div class="ownership__streams">
+      <!-- RENTING -->
+      <div class="stream stream--rent reveal" data-reveal>
+        <div class="stream__head">
+          <p class="stream__label">Renting — ₱2,000/month</p>
+          <p class="stream__amount stream__amount--muted"><span data-countup="72000" data-prefix="₱">₱72,000</span><span class="stream__tail">&nbsp;…and counting</span></p>
+        </div>
+        <div class="stream__ticks" data-stream aria-hidden="true"></div>
+        <p class="stream__foot">Stop paying → your website disappears. You own nothing.</p>
+      </div>
+
+      <!-- OWNING -->
+      <div class="stream stream--own reveal" data-reveal data-reveal-delay="180">
+        <div class="stream__head">
+          <p class="stream__label stream__label--own">Owning — pay once</p>
+          <p class="stream__amount"><span data-countup="30500" data-prefix="₱">₱30,500</span><span class="stream__tail stream__tail--own">&nbsp;— done</span></p>
+        </div>
+        <div class="stream__own-bar">
+          <span class="stream__own-fill"></span>
+          <span class="stream__own-rail"></span>
+          <span class="stream__own-forever"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M5 12.5l5 5 9-11" fill="none" stroke="#7FAF9F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>yours forever</span>
+        </div>
+        <p class="stream__foot stream__foot--own">Code + domain in your name. After year 3: ~₱1,500/yr for the domain. That's it.</p>
+      </div>
+    </div>
+
+    <p class="ownership__kicker reveal" data-reveal>Same three years. ₱41,500 apart — and only one is yours.</p>
+  </div>
+</section>
+
+<!-- ============ GUARANTEE ============ -->
+<section id="guarantee" class="guarantee" data-screen-label="Guarantee">
+  <div class="guarantee__inner reveal" data-reveal>
+    <span class="guarantee__icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24"><path d="M5 12.5l5 5 9-11" fill="none" stroke="#FBF6F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+    <h2 class="guarantee__title">If you don't love it, you don't keep it.</h2>
+    <p class="guarantee__text">I'll rebuild it until you're happy — or I give your money back. In full. The risk is mine to carry, not yours.</p>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section class="trust" data-screen-label="Trust signals">
+  <div class="trust__inner">
+    <h2 class="trust__title reveal" data-reveal>Why trust a stranger from the internet?</h2>
+    <p class="trust__lede reveal" data-reveal>Fair question. Here's the honest answer.</p>
+    <div class="trust__grid">
+      <div class="tsignal reveal" data-reveal data-reveal-delay="0">
+        <h3 class="tsignal__title">Custom-coded</h3>
+        <p class="tsignal__text">No templates, no page builders. Built by hand to load fast on the phones your customers actually use.</p>
+      </div>
+      <div class="tsignal reveal" data-reveal data-reveal-delay="100">
+        <h3 class="tsignal__title">You own everything</h3>
+        <p class="tsignal__text">The code, the domain, the content — all in your name, not mine. No hostage situation.</p>
+      </div>
+      <div class="tsignal reveal" data-reveal data-reveal-delay="200">
+        <h3 class="tsignal__title">Local</h3>
+        <p class="tsignal__text">From here, not a faceless agency abroad. We can meet over coffee — talk first, money later.</p>
+      </div>
+      <div class="tsignal reveal" data-reveal data-reveal-delay="300">
+        <h3 class="tsignal__title">Live in a week</h3>
+        <p class="tsignal__text">From "yes" to live: 5–7 days. Not one of those projects that drags on for six months.</p>
+      </div>
+    </div>
+    <div class="trust__scarcity reveal" data-reveal>
+      <span class="chip"><span class="dot"></span>I take 2 builds a month — so nothing gets rushed.</span>
+    </div>
+    <div class="trust__reserved reveal" data-reveal>
+      <p>[ Reserved for the first client's real words. No invented testimonials here — when the first client is happy, what they actually say goes in this spot. ]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BREATH ============ -->
+<div class="breath" aria-hidden="true"></div>
+
+<!-- ============ FINAL CTA ============ -->
+<section id="book" class="final" data-screen-label="Final CTA">
+  <div class="final__inner reveal" data-reveal>
+    <h2 class="final__title">Let's just talk.</h2>
+    <p class="final__text">I'll show you a real mockup of your own business — free, before you decide anything. If it's not for you, no hard feelings — you lose nothing by asking.</p>
+    <a href="https://m.me/yourpage" class="btn btn--lg btn--arrow" data-book>Book a free discovery call <span class="btn__arrow" aria-hidden="true">→</span></a>
+    <p class="final__note">15 minutes&nbsp;·&nbsp;free&nbsp;·&nbsp;no pressure</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" data-screen-label="Footer">
+  <div class="footer__inner">
+    <p class="footer__brand" data-brand>studio</p>
+    <p class="footer__tag">Custom websites for the best-kept secrets of Quezon &amp; Batangas.</p>
+    <p class="footer__contact"><a href="#book" data-book>Message me</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="tel:+639000000000">0900 000 0000</a></p>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
