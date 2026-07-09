@@ -577,11 +577,13 @@ h1, h2, h3, p, blockquote, ul, figure { margin: 0; }
    ========================================================= */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: .001ms !important; animation-iteration-count: 1 !important;
-    transition-duration: .001ms !important;
-  }
-  .js .reveal { opacity: 1 !important; transform: none !important; }
+  /* Keep gentle fades, cross-fades, and the storytelling beats — these are the
+     recommended reduced-motion alternatives. Switch off only large, looping, or
+     spatial motion (zoom / spin / parallax / slide / bounce). */
   .hero__photo { animation: none !important; transform: none !important; }
+  .founder__orbits { animation: none !important; }
+  .tier__badge::after { animation: none !important; }
   .hero__cue { display: none; }
+  /* Reveals fade in place, without the vertical slide */
+  .js .reveal, .js .reveal.is-visible { transform: none !important; }
 }

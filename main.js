@@ -2,8 +2,13 @@
    Get Found — interactions
    Scroll reveals · nav elevation · the "40-second" chat ·
    before/after phone · count-ups · rent-tick drip.
-   All motion respects prefers-reduced-motion and degrades
-   gracefully without JS.
+
+   Triggers use a lightweight rAF-throttled scroll check rather
+   than IntersectionObserver, so they fire reliably in every
+   browser (and in embedded preview renderers) and never leave
+   content hidden. Motion still respects prefers-reduced-motion:
+   large/spatial motion is switched off in CSS, gentle fades and
+   the storytelling beats remain.
    ========================================================= */
 (function () {
   'use strict';
@@ -19,9 +24,6 @@
     founderName: '' // e.g. 'Alejandro'. Leave '' to keep the placeholder.
   };
 
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var hasIO = 'IntersectionObserver' in window;
-
   function ready(fn) {
     if (document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn);
@@ -32,6 +34,23 @@
     else el.classList.add('is-visible');
   }
 
+  /* ---- "in view" trigger: fires cb once when el scrolls in ---- */
+  var watchers = [];
+  function onView(el, cb, offset) {
+    if (!el) return;
+    watchers.push({ el: el, cb: cb, offset: (offset == null ? 0.1 : offset), done: false });
+  }
+  function pump() {
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    for (var i = 0; i < watchers.length; i++) {
+      var w = watchers[i];
+      if (w.done) continue;
+      if (w.el.getBoundingClientRect().top < vh * (1 - w.offset)) {
+        w.done = true;
+        try { w.cb(); } catch (e) { /* keep the loop alive */ }
+      }
+    }
+  }
   ready(function () {
     applyConfig();
     initNav();
@@ -40,6 +59,15 @@
     initSignature();
     initCountups();
     initRentStream();
+
+    // Call pump directly on scroll (scroll events are already frame-throttled by
+    // the browser) so reveals fire even where requestAnimationFrame is throttled.
+    window.addEventListener('scroll', pump, { passive: true });
+    window.addEventListener('resize', pump, { passive: true });
+    pump();                   // reveal whatever is already in view
+    setTimeout(pump, 60);     // ...and again once layout settles
+    setTimeout(pump, 400);
+    window.addEventListener('load', pump);
   });
 
   /* ---- config into the DOM ---- */
@@ -67,22 +95,14 @@
 
   /* ---- generic scroll reveals (everything except the chat) ---- */
   function initReveals() {
-    var els = Array.prototype.slice
+    Array.prototype.slice
       .call(document.querySelectorAll('[data-reveal]'))
-      .filter(function (el) { return !el.closest('#chat'); });
-
-    if (reduce || !hasIO) { els.forEach(function (el) { show(el); }); return; }
-
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        var el = e.target;
-        show(el, parseInt(el.getAttribute('data-reveal-delay') || '0', 10));
-        io.unobserve(el);
+      .filter(function (el) { return !el.closest('#chat'); })
+      .forEach(function (el) {
+        onView(el, function () {
+          show(el, parseInt(el.getAttribute('data-reveal-delay') || '0', 10));
+        }, 0.08);
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-    els.forEach(function (el) { io.observe(el); });
   }
 
   /* ---- the signature moment: a text thread that turns on you ---- */
@@ -97,23 +117,7 @@
     var doubt = chat.querySelector('[data-doubt]');
     var seen = chat.querySelector('.chat__seen');
 
-    if (reduce || !hasIO) {
-      [friend, reply, found, doubt, seen].forEach(function (el) { show(el); });
-      return;
-    }
-
-    var started = false;
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting || started) return;
-        started = true;
-        io.disconnect();
-        runChat();
-      });
-    }, { threshold: 0.3 });
-    io.observe(chat);
-
-    function runChat() {
+    onView(chat, function () {
       show(friend, 0);
       show(reply, 550);
       show(found, 1200);
@@ -130,7 +134,7 @@
           show(seen, 260);
         }, 1300);
       }, 2050);
-    }
+    }, 0.28);
   }
 
   /* ---- before / after phone ---- */
@@ -157,48 +161,34 @@
       });
     });
 
-    if (reduce || !hasIO) { setState(true); return; }
-
     var auto = false;
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting || auto) return;
-        auto = true;
-        io.disconnect();
-        setTimeout(function () { setState(true); }, 900);
-      });
-    }, { threshold: 0.55 });
-    io.observe(phone);
+    onView(phone, function () {
+      if (auto) return;
+      auto = true;
+      setTimeout(function () { setState(true); }, 900);
+    }, 0.35);
   }
 
   /* ---- count-ups (₱72,000 …and counting / ₱30,500 — done) ---- */
   function initCountups() {
-    var els = Array.prototype.slice.call(document.querySelectorAll('[data-countup]'));
-    if (!els.length) return;
-
-    var settle = function (el) {
-      var t = parseInt(el.getAttribute('data-countup'), 10);
-      el.textContent = (el.getAttribute('data-prefix') || '') + t.toLocaleString('en-PH');
-    };
-    if (reduce || !hasIO) { els.forEach(settle); return; }
-
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        var el = e.target;
-        io.unobserve(el);
+    Array.prototype.slice.call(document.querySelectorAll('[data-countup]')).forEach(function (el) {
+      onView(el, function () {
         var target = parseInt(el.getAttribute('data-countup'), 10);
         var prefix = el.getAttribute('data-prefix') || '';
-        var t0 = performance.now(), dur = 1400;
-        (function tick(t) {
-          var p = Math.min(1, (t - t0) / dur);
+        var steps = 44, i = 0, dur = 1400;
+        var settle = function () { el.textContent = prefix + target.toLocaleString('en-PH'); };
+        var timer = setInterval(function () {
+          i++;
+          var p = i / steps;
           var eased = 1 - Math.pow(1 - p, 3);
           el.textContent = prefix + Math.round(target * eased).toLocaleString('en-PH');
-          if (p < 1) requestAnimationFrame(tick);
-        })(t0);
-      });
-    }, { threshold: 0.6 });
-    els.forEach(function (el) { io.observe(el); });
+          if (i >= steps) { clearInterval(timer); settle(); }
+        }, dur / steps);
+        // Safety: guarantee the final value even if timers are throttled (e.g. a
+        // backgrounded/throttled tab), so it never sticks on a partial number.
+        setTimeout(function () { clearInterval(timer); settle(); }, dur + 250);
+      }, 0.2);
+    });
   }
 
   /* ---- renting stream: ₱2,000 dripping away, one tick at a time ---- */
@@ -218,19 +208,10 @@
     forever.textContent = 'forever →';
     stream.appendChild(forever);
 
-    if (reduce || !hasIO) return; // ticks already visible
-
     ticks.forEach(function (k) { k.style.opacity = '0'; k.style.transition = 'opacity .3s ease'; });
-    var done = false;
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting || done) return;
-        done = true;
-        io.disconnect();
-        ticks.forEach(function (k, idx) { setTimeout(function () { k.style.opacity = '1'; }, 200 + idx * 40); });
-      });
-    }, { threshold: 0.5 });
-    io.observe(stream);
+    onView(stream, function () {
+      ticks.forEach(function (k, idx) { setTimeout(function () { k.style.opacity = '1'; }, 200 + idx * 40); });
+    }, 0.25);
   }
 
 })();
