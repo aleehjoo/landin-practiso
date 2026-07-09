@@ -24,7 +24,7 @@ export function FinalCta() {
           <a href={config.contactUrl} target="_blank" rel="noreferrer" className="btn btn-lg">
             Get a free mockup <span className="arrow" aria-hidden>→</span>
           </a>
-          <p className="mt-5 text-[14px] text-sage">Free. About 15 minutes. No pressure to buy.</p>
+          <p className="mt-5 text-[14px] text-sage">Free. About 15 minutes. No pressure.</p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[14px]">
             <a href={config.instagram} target="_blank" rel="noreferrer" className="text-sage no-underline hover:text-cream">
