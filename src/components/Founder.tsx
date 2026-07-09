@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { config } from '../lib/config'
+import { photos } from '../lib/images'
 
 const orbits = [
   { rx: 300, ry: 210, rot: -7 },
@@ -56,7 +57,7 @@ export function Founder() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-12 flex items-center justify-center gap-4"
         >
-          <img src="/img/founder.webp" alt={`Portrait of ${config.founder}.`} className="h-[88px] w-[88px] flex-none rounded-full object-cover" loading="lazy" decoding="async" />
+          <img src={photos.founder} alt={`Portrait of ${config.founder}.`} className="h-[88px] w-[88px] flex-none rounded-full object-cover" loading="lazy" decoding="async" />
           <div className="text-left">
             <p className="font-serif text-[19px] font-[550] text-ink">{config.founder}</p>
             <p className="mt-[2px] text-[14px]" style={{ color: 'rgba(13,58,53,.6)' }}>I build it, and I&rsquo;m the one you talk to.</p>

@@ -1,5 +1,6 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
+import { photos } from '../lib/images'
 
 export function PhotoBreak() {
   const reduce = useReducedMotion()
@@ -13,7 +14,7 @@ export function PhotoBreak() {
   return (
     <section ref={ref} className="relative h-[58vh] min-h-[380px] overflow-hidden bg-ink">
       <motion.img
-        src="/img/break.webp"
+        src={photos.photoBreak}
         alt="A single table set in the garden, morning light through the leaves."
         loading="lazy"
         decoding="async"

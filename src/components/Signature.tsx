@@ -1,5 +1,6 @@
 import { AnimatePresence, motion, useInView, useReducedMotion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
+import { photos } from '../lib/images'
 
 function DeadCard() {
   return (
@@ -27,7 +28,7 @@ function AliveCard() {
   return (
     <div className="flex h-full flex-col bg-cream text-left">
       <div className="relative h-[195px]" style={{ background: 'linear-gradient(135deg,var(--color-green),var(--color-ink))' }}>
-        <img src="/img/phone.webp" alt="The garden venue set for an evening, lit and inviting." className="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
+        <img src={photos.phone} alt="The garden venue set for an evening, lit and inviting." className="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
       </div>
       <div className="flex flex-col gap-[10px] p-4">
         <p className="font-serif text-[19px] font-[550] text-ink">Hardin Verde · Garden Events</p>

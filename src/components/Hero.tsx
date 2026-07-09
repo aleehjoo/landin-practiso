@@ -1,6 +1,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { config } from '../lib/config'
+import { photos } from '../lib/images'
 import { EASE } from '../lib/anim'
 
 export function Hero() {
@@ -22,7 +23,7 @@ export function Hero() {
   return (
     <header id="top" ref={ref} className="relative flex min-h-[92vh] items-end overflow-hidden bg-ink">
       <motion.img
-        src="/img/hero.webp"
+        src={photos.hero}
         alt="A garden events venue glowing at golden hour, tables set beneath the trees."
         className="absolute inset-0 h-full w-full object-cover"
         style={reduce ? undefined : { y, scale }}

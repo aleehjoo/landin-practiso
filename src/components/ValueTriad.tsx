@@ -1,18 +1,20 @@
+import { photos } from '../lib/images'
+
 const cards = [
   {
-    img: '/img/findable.webp',
+    img: photos.findable,
     alt: 'Hands holding a phone, searching for a place nearby.',
     title: 'Findable',
     text: "Someone searches your name, or just “garden venue near me,” and you show up, with the hours that are actually right.",
   },
   {
-    img: '/img/credible.webp',
+    img: photos.credible,
     alt: 'A beautifully plated dish in warm daylight.',
     title: 'Credible',
     text: 'One look and they can tell this place is real, it’s beautiful, and it’s open. No second-guessing.',
   },
   {
-    img: '/img/bookable.webp',
+    img: photos.bookable,
     alt: 'A thumb tapping message on a phone.',
     title: 'Bookable',
     text: 'A question turns into a message, and a message turns into a booking, while they’re still interested.',
