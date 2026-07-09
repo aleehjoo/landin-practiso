@@ -1,82 +1,84 @@
-# Get Found — landing page
+# Adomin.studio — landing page
 
-A custom-coded, single-page site for a studio that builds websites for local
-businesses (the working example is a garden events venue in Tayabas, Quezon).
-No framework, no build step, no dependencies — just HTML, CSS, and a little
-vanilla JavaScript. It loads fast on a phone and it's yours to own.
+A single-page site for a studio that builds websites for local businesses
+(the working example is a garden events venue in Tayabas, Quezon). Built with
+**React + Vite + Tailwind CSS v4 + Framer Motion**, with self-hosted fonts and
+real photography.
 
-## Files
-
-```
-index.html          Markup + copy for every section
-styles.css          All styling (design tokens at the top)
-main.js             Interactions (see CONFIG at the top)
-assets/
-  fonts.css         @font-face for the self-hosted fonts
-  fonts/*.woff2     Fraunces (display) + Hanken Grotesk (body) subsets
-  img/*.webp        Photography
-design/             The original Claude Design source, kept for reference
-```
-
-## Run it locally
-
-It's a static site, so any static server works:
+## Run it
 
 ```bash
-npx serve .
-# or
-python -m http.server 4321
+npm install
+npm run dev      # local dev server (Vite) — open the URL it prints
+npm run build    # production build into dist/
+npm run preview  # serve the production build locally
 ```
 
-Then open the URL it prints. (Opening `index.html` directly with `file://`
-also works, but a server is closer to production and avoids font/CORS quirks.)
+You need a real browser to see the motion. Embedded preview panes often run in a
+throttled / reduced-motion mode and will show the calm, static version.
+
+## Where things live
+
+```
+index.html                 Vite entry
+src/
+  main.tsx                 mounts React
+  index.css                Tailwind theme (colors, fonts), base styles, keyframes
+  fonts.css                @font-face for the self-hosted fonts
+  lib/config.ts            brand, founder, contacts  ← edit this to make it yours
+  lib/anim.tsx             shared easing + a small Reveal helper
+  components/*.tsx         one file per section
+public/
+  img/*.webp               photography
+  fonts/*.woff2            Fraunces (display) + Hanken Grotesk (body)
+design/                    the original Claude Design source, kept for reference
+```
 
 ## Make it yours
 
-**1. Brand name + booking link.** Open `main.js` and edit the `CONFIG` block
-at the top — it's the only place these live:
+**Names, contacts, booking link** live in `src/lib/config.ts`:
 
-```js
-var CONFIG = {
-  brandName:  'studio',                 // shown in the nav + footer
-  bookingUrl: 'https://m.me/yourpage',  // where every "Book" button goes
-  founderName: ''                       // e.g. 'Alejandro' (fills the founder line)
-};
+```ts
+export const config = {
+  brand: 'Adomin.studio',
+  founder: 'Alejandro Umila',
+  email: 'umila.alejandro@gmail.com',
+  instagram: 'https://www.instagram.com/adomin.dev/',
+  facebook: 'https://www.facebook.com/alejandro.umila.5/',
+  contactUrl: 'https://m.me/alejandro.umila.5', // every "let's talk" button
+}
 ```
 
-`bookingUrl` can be a Messenger link, a WhatsApp `https://wa.me/…` link, a
-Calendly URL, a `tel:` number, or a `mailto:` — whatever you want the buttons
-to open.
+Heads up: `contactUrl` is a Messenger link built from the Facebook profile. If
+`m.me/alejandro.umila.5` doesn't open a chat for you, swap it for the `mailto`
+value in the same file, or a Calendly URL.
 
-**2. Photos.** Drop replacements into `assets/img/` using the same filenames:
+**Photos** sit in `public/img/` (same filenames = drop-in replacement). They were
+generated as realistic placeholders; swap in real photos of the actual business
+before launch. `founder.webp` should become the real founder's photo.
 
-| File            | Where it shows        | What works best |
-|-----------------|-----------------------|-----------------|
-| `hero.webp`     | Full-screen hero      | Wide, warm, atmospheric — it gets darkened for text |
-| `phone.webp`    | The "after" phone card| The business looking its best |
-| `findable.webp` | Value card 1          | A search moment — phone in hand |
-| `credible.webp` | Value card 2          | A beautiful detail — plate, table, light |
-| `bookable.webp` | Value card 3          | A hand tapping "message" |
-| `break.webp`    | Full-bleed photo break| One gorgeous shot — morning light, a set table |
-| `founder.webp`  | Founder portrait      | **Replace with the real founder's photo** |
+**Copy** lives right in the section components under `src/components/`. Prices are
+in `Pricing.tsx`; the venue story is in `Problem.tsx` and `Signature.tsx`.
 
-The photos here were generated with Higgsfield (Soul 2.0) as realistic
-placeholders. Swap in real shots of the actual business before you go live —
-real always beats generated.
+## How the motion is set up
 
-**3. Copy, prices, the story.** All text is right there in `index.html`. Prices
-live in the pricing section; the example "Hardin Verde" venue story lives in the
-Problem and Signature sections — change the names, numbers, and city to match.
+Each section has its own intent rather than one reused effect:
+
+- **Hero** — headline rises out of a mask; the photo does scroll-linked parallax
+- **The chat** — bubbles spring in one by one, with a live typing indicator
+- **Before / After phone** — the screens swipe sideways (not a crossfade)
+- **Value cards** — no entrance; tactile hover (image zoom + lift)
+- **Photo break** — scroll parallax
+- **Pricing** — tiers spring up in a stagger; the badge shimmers
+- **Founder** — the orbit rings draw themselves on, then drift
+- **Renting vs Owning** — the counters count up and the rent bar drips away
+- **Guarantee** — the check mark draws itself on
+- **Trust** — quiet; hover only
+
+All of it respects `prefers-reduced-motion`: large/spatial motion is dropped and
+content is shown in place.
 
 ## Deploy
 
-Drag the folder onto **Netlify**, import it to **Vercel**, or push it to a
-**GitHub Pages** repo. There's nothing to build — the folder *is* the site.
-
-## Notes
-
-- **Motion respects `prefers-reduced-motion`** — everything falls back to a
-  calm, static page for people who ask for reduced motion.
-- **Works without JavaScript** — content is fully readable; JS only adds the
-  reveals, the before/after toggle, and the count-ups.
-- **Fonts are self-hosted** — no external font requests, no layout shift.
+`npm run build` outputs a static `dist/`. Deploy it to Vercel, Netlify, GitHub
+Pages, or any static host.
