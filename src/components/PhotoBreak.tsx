@@ -5,9 +5,10 @@ export function PhotoBreak() {
   const reduce = useReducedMotion()
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
-  // image drifts slower than the scroll for a real parallax feel
-  const y = useTransform(scrollYProgress, [0, 1], ['-12%', '12%'])
-  const scale = 1.25
+  // image drifts slower than the scroll for a real parallax feel;
+  // scale exceeds the travel so no background edge shows
+  const y = useTransform(scrollYProgress, [0, 1], ['-11%', '11%'])
+  const scale = 1.3
 
   return (
     <section ref={ref} className="relative h-[58vh] min-h-[380px] overflow-hidden bg-ink">

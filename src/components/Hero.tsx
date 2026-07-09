@@ -7,8 +7,9 @@ export function Hero() {
   const reduce = useReducedMotion()
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '16%'])
-  const scale = useTransform(scrollYProgress, [0, 1], [1.04, 1.16])
+  // scale always exceeds the vertical travel so no background edge shows
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '9%'])
+  const scale = useTransform(scrollYProgress, [0, 1], [1.12, 1.2])
 
   // headline lines rise up out of a mask
   const rise = (delay: number) =>
