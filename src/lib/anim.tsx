@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import type { ReactNode } from 'react'
 
 // A calm, natural ease used across the site.
@@ -23,12 +23,11 @@ export function Reveal({
   delay?: number
   amount?: number
 }) {
-  const reduce = useReducedMotion()
   return (
     <motion.div
       className={className}
-      initial={reduce ? false : { opacity: 0, y, x }}
-      whileInView={reduce ? undefined : { opacity: 1, y: 0, x: 0 }}
+      initial={{ opacity: 0, y, x }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
       viewport={{ once: true, amount }}
       transition={{ duration: 0.6, ease: EASE, delay }}
     >

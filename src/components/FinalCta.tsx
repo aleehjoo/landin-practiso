@@ -1,16 +1,15 @@
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { config } from '../lib/config'
 
 export function FinalCta() {
-  const reduce = useReducedMotion()
   return (
     <>
       <div aria-hidden="true" className="h-[180px] bg-cream" />
       <section className="bg-ink px-6 py-[130px] text-cream">
         <div className="mx-auto max-w-[720px] text-center">
           <motion.h2
-            initial={reduce ? false : { opacity: 0, scale: 0.96 }}
-            whileInView={reduce ? undefined : { opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="mb-6 font-serif text-[clamp(38px,6vw,64px)] font-[460] leading-[1.05] tracking-[-0.02em]"

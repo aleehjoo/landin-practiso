@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { config } from '../lib/config'
 
 const tiers = [
@@ -7,7 +7,8 @@ const tiers = [
     name: 'Starter',
     price: '₱14,500',
     sub: 'one-time, or ₱1,450/mo',
-    promise: 'Get online with something clean, fast, and real.',
+    value: 'Get online and finally look real, so people stop scrolling past you.',
+    bestFor: 'For getting found with something clean you can be proud of.',
     plus: null as string | null,
     items: [
       'One-page site, up to 3 sections',
@@ -25,7 +26,8 @@ const tiers = [
     name: 'Standard',
     price: '₱30,500',
     sub: 'one-time, or from ₱3,050/mo',
-    promise: 'The one that actually turns visitors into customers.',
+    value: 'Turn the people who look you up into messages and real bookings.',
+    bestFor: 'What most places need. Findable, credible, and easy to book.',
     plus: 'Everything in Starter, plus:',
     items: [
       'Up to 6 sections',
@@ -43,7 +45,8 @@ const tiers = [
     name: 'Premium',
     price: '₱52,500',
     sub: 'one-time, or ₱5,250/mo',
-    promise: 'The full setup, done for you.',
+    value: 'Everything handled and tuned, so the site brings in bookings while you run the place.',
+    bestFor: 'For when you want the whole thing done for you.',
     plus: 'Everything in Standard, plus:',
     items: [
       'Live booking calendar',
@@ -57,14 +60,11 @@ const tiers = [
 ]
 
 export function Pricing() {
-  const reduce = useReducedMotion()
   const container = { hidden: {}, show: { transition: { staggerChildren: 0.12 } } }
-  const item = reduce
-    ? {}
-    : {
-        hidden: { opacity: 0, y: 30 },
-        show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 240, damping: 26 } },
-      }
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { type: 'spring' as const, stiffness: 240, damping: 26 } },
+  }
 
   return (
     <section id="pricing" className="bg-sand px-6 pt-[110px] pb-[100px]">
@@ -73,23 +73,27 @@ export function Pricing() {
         <h2 className="mb-[14px] font-serif text-[clamp(32px,4.6vw,52px)] font-[460] leading-[1.1] tracking-[-0.02em]">
           One price. You own it. Done.
         </h2>
-        <p className="mb-[70px] max-w-[52ch] text-[18px] leading-[1.55]" style={{ color: 'rgba(13,58,53,.7)' }}>
+        <p className="max-w-[54ch] text-[18px] leading-[1.55]" style={{ color: 'rgba(13,58,53,.7)' }}>
           No monthly fees, no rented website. I build it custom, in your name, and it&rsquo;s yours to keep.
+        </p>
+        <p className="mt-3 mb-[64px] max-w-[54ch] text-[16px] leading-[1.55]" style={{ color: 'rgba(13,58,53,.55)' }}>
+          Every plan makes you findable, credible, and bookable. The tiers just change how much I build and set up for
+          you.
         </p>
 
         <motion.div
           variants={container}
-          initial={reduce ? false : 'hidden'}
-          whileInView={reduce ? undefined : 'show'}
+          initial="hidden"
+          whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
-          className="grid grid-cols-[repeat(auto-fit,minmax(290px,1fr))] items-start gap-7"
+          className="grid grid-cols-1 items-start gap-7 lg:grid-cols-3"
         >
           {tiers.map((t) =>
             t.flagship ? (
               <motion.div
                 key={t.id}
                 variants={item}
-                className="relative order-first rounded-[24px] bg-ink px-[30px] pt-10 pb-[34px] text-cream transition-shadow duration-300 hover:shadow-[0_52px_90px_-30px_rgba(13,58,53,.65)] md:order-none md:-translate-y-4"
+                className="relative order-first rounded-[24px] bg-ink px-[30px] pt-10 pb-[34px] text-cream transition-shadow duration-300 hover:shadow-[0_52px_90px_-30px_rgba(13,58,53,.65)] lg:order-none lg:-translate-y-4"
                 style={{ boxShadow: '0 44px 80px -30px rgba(13,58,53,.55)' }}
               >
                 <span className="badge absolute -top-[14px] left-[30px] rounded-full bg-green px-4 py-[7px] text-[12.5px] font-bold uppercase tracking-[0.1em] text-cream" style={{ boxShadow: '0 10px 20px -8px rgba(13,58,53,.6)' }}>
@@ -98,7 +102,8 @@ export function Pricing() {
                 <h3 className="mb-[6px] text-[15px] font-bold uppercase tracking-[0.12em] text-sage">{t.name}</h3>
                 <p className="mb-[4px] font-serif text-[48px] font-[550] tracking-[-0.02em] text-cream">{t.price}</p>
                 <p className="mb-[18px] text-[14px] text-sage">{t.sub}</p>
-                <p className="mb-[22px] font-serif text-[18px] italic text-sage">{t.promise}</p>
+                <p className="mb-[6px] font-serif text-[19px] italic leading-[1.35] text-cream">{t.value}</p>
+                <p className="mb-[24px] text-[13.5px] text-sage">{t.bestFor}</p>
                 <p className="mb-3 text-[14px] font-semibold text-sage">{t.plus}</p>
                 <ul className="flex flex-col gap-[11px] text-[15.5px] leading-[1.45]" style={{ color: 'rgba(251,246,240,.92)' }}>
                   {t.items.map((it) => (
@@ -108,12 +113,7 @@ export function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={config.contactUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn mt-[26px] flex w-full justify-center"
-                >
+                <a href={config.contactUrl} target="_blank" rel="noreferrer" className="btn mt-[26px] flex w-full justify-center">
                   Start with a free chat <span className="arrow" aria-hidden>→</span>
                 </a>
               </motion.div>
@@ -127,7 +127,8 @@ export function Pricing() {
                 <h3 className="mb-[6px] text-[15px] font-bold uppercase tracking-[0.12em]" style={{ color: 'rgba(13,58,53,.6)' }}>{t.name}</h3>
                 <p className="mb-[4px] font-serif text-[44px] font-[550] tracking-[-0.02em] text-ink">{t.price}</p>
                 <p className="mb-[18px] text-[14px]" style={{ color: 'rgba(13,58,53,.55)' }}>{t.sub}</p>
-                <p className="mb-[22px] font-serif text-[18px] italic text-green">{t.promise}</p>
+                <p className="mb-[6px] font-serif text-[19px] italic leading-[1.35] text-green">{t.value}</p>
+                <p className="mb-[24px] text-[13.5px]" style={{ color: 'rgba(13,58,53,.5)' }}>{t.bestFor}</p>
                 {t.plus && <p className="mb-3 text-[14px] font-semibold" style={{ color: 'rgba(13,58,53,.55)' }}>{t.plus}</p>}
                 <ul className="flex flex-col gap-[11px] text-[15.5px] leading-[1.45]" style={{ color: 'rgba(13,58,53,.85)' }}>
                   {t.items.map((it) => (
@@ -142,7 +143,12 @@ export function Pricing() {
           )}
         </motion.div>
 
-        <div className="mt-14 flex max-w-[720px] flex-col gap-[14px]">
+        {/* value anchor — reframes the price so saying no feels silly */}
+        <p className="mx-auto mt-16 max-w-[30ch] text-center font-serif text-[clamp(22px,3vw,30px)] font-[440] italic leading-[1.35] text-ink">
+          For most places, one new booking pays for the whole thing.
+        </p>
+
+        <div className="mt-12 flex max-w-[720px] flex-col gap-[14px]">
           <p className="text-[16.5px] leading-[1.55]" style={{ color: 'rgba(13,58,53,.8)' }}>
             Any plan can be split over 4, 6, or 10 months at no extra cost. Same price, just easier to start.
           </p>
@@ -161,8 +167,8 @@ export function Pricing() {
             </svg>
           </span>
           <p className="text-[16px] leading-[1.5] text-ink">
-            <strong>Every tier:</strong> I&rsquo;ll rebuild it till you&rsquo;re happy, or you get your money back. All of it.{' '}
-            <a href="#guarantee" className="font-semibold text-green">How the guarantee works ↓</a>
+            <strong>And there is no risk:</strong> I&rsquo;ll rebuild it till you&rsquo;re happy, or you get every peso
+            back. <a href="#guarantee" className="font-semibold text-green">How the guarantee works ↓</a>
           </p>
         </div>
       </div>

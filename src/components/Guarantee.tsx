@@ -1,7 +1,6 @@
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export function Guarantee() {
-  const reduce = useReducedMotion()
   return (
     <section id="guarantee" className="bg-cream px-6 py-[130px]">
       <div className="mx-auto max-w-[680px] text-center">
@@ -18,8 +17,8 @@ export function Guarantee() {
               strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
-              initial={reduce ? false : { pathLength: 0 }}
-              whileInView={reduce ? undefined : { pathLength: 1 }}
+              initial={{ pathLength: 0 }}
+              whileInView={{ pathLength: 1 }}
               viewport={{ once: true, amount: 0.35 }}
               transition={{ duration: 0.7, ease: 'easeInOut', delay: 0.15 }}
             />

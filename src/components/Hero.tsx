@@ -12,13 +12,18 @@ export function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '9%'])
   const scale = useTransform(scrollYProgress, [0, 1], [1.12, 1.2])
 
-  // headline lines rise up out of a mask
-  const rise = (delay: number) =>
-    reduce ? {} : { initial: { y: '115%' }, animate: { y: 0 }, transition: { duration: 0.9, ease: EASE, delay } }
-  const fadeUp = (delay: number) =>
-    reduce
-      ? {}
-      : { initial: { opacity: 0, y: 16 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6, ease: EASE, delay } }
+  // headline lines rise up out of a mask (always play; only the parallax below
+  // respects reduced motion)
+  const rise = (delay: number) => ({
+    initial: { y: '115%' },
+    animate: { y: 0 },
+    transition: { duration: 0.9, ease: EASE, delay },
+  })
+  const fadeUp = (delay: number) => ({
+    initial: { opacity: 0, y: 16 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, ease: EASE, delay },
+  })
 
   return (
     <header id="top" ref={ref} className="relative flex min-h-[92vh] items-end overflow-hidden bg-ink">

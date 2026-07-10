@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useInView, useReducedMotion } from 'framer-motion'
+import { AnimatePresence, motion, useInView } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { photos } from '../lib/images'
 
@@ -55,7 +55,6 @@ function AliveCard() {
 }
 
 export function Signature() {
-  const reduce = useReducedMotion()
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.25 })
   const [after, setAfter] = useState(false)
@@ -65,10 +64,6 @@ export function Signature() {
   // auto-swipe to "after" the first time it scrolls into view
   useEffect(() => {
     if (!inView || touched.current) return
-    if (reduce) {
-      setAfter(true)
-      return
-    }
     const t = setTimeout(() => {
       if (!touched.current) {
         setDir(1)
@@ -76,7 +71,7 @@ export function Signature() {
       }
     }, 950)
     return () => clearTimeout(t)
-  }, [inView, reduce])
+  }, [inView])
 
   const go = (next: boolean) => {
     touched.current = true
@@ -85,9 +80,9 @@ export function Signature() {
   }
 
   const variants = {
-    enter: (d: number) => ({ x: reduce ? 0 : d > 0 ? '100%' : '-100%' }),
+    enter: (d: number) => ({ x: d > 0 ? '100%' : '-100%' }),
     center: { x: 0 },
-    exit: (d: number) => ({ x: reduce ? 0 : d > 0 ? '-100%' : '100%' }),
+    exit: (d: number) => ({ x: d > 0 ? '-100%' : '100%' }),
   }
 
   return (
@@ -111,7 +106,7 @@ export function Signature() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={reduce ? { duration: 0 } : { type: 'spring', stiffness: 320, damping: 34 }}
+                transition={{ type: 'spring', stiffness: 320, damping: 34 }}
                 className="absolute inset-0"
               >
                 {after ? <AliveCard /> : <DeadCard />}
@@ -142,8 +137,8 @@ export function Signature() {
         <p className="mt-[14px] text-[14px]" style={{ color: 'rgba(13,58,53,.55)' }}>Same business. Five days later.</p>
 
         <motion.div
-          initial={reduce ? false : { opacity: 0, y: 20 }}
-          whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           className="mx-auto mt-[90px] max-w-[640px] text-left"

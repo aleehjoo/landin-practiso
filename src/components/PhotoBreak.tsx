@@ -26,8 +26,8 @@ export function PhotoBreak() {
         style={{ background: 'linear-gradient(to top, rgba(13,58,53,.55), rgba(13,58,53,.1) 40%)' }}
       />
       <motion.p
-        initial={reduce ? false : { opacity: 0, x: 40 }}
-        whileInView={reduce ? undefined : { opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className="absolute right-6 bottom-10 left-6 z-[2] mx-auto max-w-[1072px] text-right font-serif text-[clamp(20px,2.6vw,28px)] font-[440] italic text-cream"

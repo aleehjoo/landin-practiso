@@ -1,10 +1,9 @@
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { config } from '../lib/config'
 import { EASE } from '../lib/anim'
 
 export function Nav() {
-  const reduce = useReducedMotion()
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -16,8 +15,8 @@ export function Nav() {
 
   return (
     <motion.nav
-      initial={reduce ? false : { y: -80 }}
-      animate={reduce ? undefined : { y: 0 }}
+      initial={{ y: -80 }}
+      animate={{ y: 0 }}
       transition={{ duration: 0.7, ease: EASE }}
       className="sticky top-0 z-50 border-b backdrop-blur-md transition-shadow duration-300"
       style={{

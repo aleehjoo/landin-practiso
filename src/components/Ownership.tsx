@@ -1,14 +1,10 @@
-import { animate, motion, useInView, useReducedMotion } from 'framer-motion'
+import { animate, motion, useInView } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
-function useCountUp(target: number, inView: boolean, reduce: boolean | null) {
+function useCountUp(target: number, inView: boolean) {
   const [val, setVal] = useState(0)
   useEffect(() => {
     if (!inView) return
-    if (reduce) {
-      setVal(target)
-      return
-    }
     const controls = animate(0, target, {
       duration: 1.4,
       ease: [0.22, 1, 0.36, 1],
@@ -16,19 +12,18 @@ function useCountUp(target: number, inView: boolean, reduce: boolean | null) {
       onComplete: () => setVal(target),
     })
     return () => controls.stop()
-  }, [inView, reduce, target])
+  }, [inView, target])
   return val
 }
 
 export function Ownership() {
-  const reduce = useReducedMotion()
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.2 })
-  const rent = useCountUp(72000, inView, reduce)
-  const own = useCountUp(30500, inView, reduce)
+  const rent = useCountUp(72000, inView)
+  const own = useCountUp(30500, inView)
 
   const container = { hidden: {}, show: { transition: { staggerChildren: 0.035, delayChildren: 0.15 } } }
-  const tickV = reduce ? {} : { hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0.3 } } }
+  const tickV = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0.3 } } }
 
   const peso = (n: number) => '₱' + n.toLocaleString('en-PH')
 
@@ -56,8 +51,8 @@ export function Ownership() {
             </div>
             <motion.div
               variants={container}
-              initial={reduce ? false : 'hidden'}
-              whileInView={reduce ? undefined : 'show'}
+              initial="hidden"
+              whileInView="show"
               viewport={{ once: true, amount: 0.5 }}
               className="flex items-center gap-1 overflow-hidden"
               aria-hidden="true"

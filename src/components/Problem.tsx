@@ -1,18 +1,13 @@
-import { motion, useInView, useReducedMotion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
 export function Problem() {
-  const reduce = useReducedMotion()
   const chatRef = useRef<HTMLDivElement>(null)
   const inView = useInView(chatRef, { once: true, amount: 0.15 })
   const [step, setStep] = useState(0)
 
   useEffect(() => {
     if (!inView) return
-    if (reduce) {
-      setStep(6)
-      return
-    }
     const timers = [
       setTimeout(() => setStep(1), 0),
       setTimeout(() => setStep(2), 600),
@@ -22,15 +17,13 @@ export function Problem() {
       setTimeout(() => setStep(6), 3680), // seen
     ]
     return () => timers.forEach(clearTimeout)
-  }, [inView, reduce])
+  }, [inView])
 
-  const pop = reduce
-    ? {}
-    : {
-        initial: { opacity: 0, scale: 0.86, y: 12 },
-        animate: { opacity: 1, scale: 1, y: 0 },
-        transition: { type: 'spring', stiffness: 520, damping: 30 },
-      }
+  const pop = {
+    initial: { opacity: 0, scale: 0.86, y: 12 },
+    animate: { opacity: 1, scale: 1, y: 0 },
+    transition: { type: 'spring' as const, stiffness: 520, damping: 30 },
+  }
 
   return (
     <section className="grain relative overflow-hidden bg-cream px-6 pt-[130px] pb-[90px]">
@@ -112,8 +105,8 @@ export function Problem() {
         </div>
 
         <motion.p
-          initial={reduce ? false : { opacity: 0 }}
-          whileInView={reduce ? undefined : { opacity: 1 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
           className="mx-auto mt-16 max-w-[22ch] text-center font-serif text-[clamp(24px,3.4vw,36px)] font-[440] italic leading-[1.3] text-ink"
