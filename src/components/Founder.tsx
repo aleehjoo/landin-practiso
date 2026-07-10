@@ -36,7 +36,7 @@ export function Founder() {
             transform={`rotate(${o.rot} 320 320)`}
             initial={reduce ? false : { pathLength: 0, opacity: 0 }}
             whileInView={reduce ? undefined : { pathLength: 1, opacity: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 1.7, delay: i * 0.16, ease: 'easeInOut' }}
           />
         ))}
@@ -53,7 +53,7 @@ export function Founder() {
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 16 }}
           whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-12 flex items-center justify-center gap-4"
         >

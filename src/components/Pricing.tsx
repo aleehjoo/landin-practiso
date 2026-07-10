@@ -81,7 +81,7 @@ export function Pricing() {
           variants={container}
           initial={reduce ? false : 'hidden'}
           whileInView={reduce ? undefined : 'show'}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.15 }}
           className="grid grid-cols-[repeat(auto-fit,minmax(290px,1fr))] items-start gap-7"
         >
           {tiers.map((t) =>

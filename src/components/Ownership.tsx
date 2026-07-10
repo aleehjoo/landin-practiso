@@ -23,7 +23,7 @@ function useCountUp(target: number, inView: boolean, reduce: boolean | null) {
 export function Ownership() {
   const reduce = useReducedMotion()
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, amount: 0.4 })
+  const inView = useInView(ref, { once: true, amount: 0.2 })
   const rent = useCountUp(72000, inView, reduce)
   const own = useCountUp(30500, inView, reduce)
 

@@ -57,7 +57,7 @@ function AliveCard() {
 export function Signature() {
   const reduce = useReducedMotion()
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, amount: 0.5 })
+  const inView = useInView(ref, { once: true, amount: 0.25 })
   const [after, setAfter] = useState(false)
   const [dir, setDir] = useState(1)
   const touched = useRef(false)
@@ -144,7 +144,7 @@ export function Signature() {
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 20 }}
           whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           className="mx-auto mt-[90px] max-w-[640px] text-left"
         >

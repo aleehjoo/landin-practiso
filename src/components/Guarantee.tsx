@@ -20,7 +20,7 @@ export function Guarantee() {
               strokeLinejoin="round"
               initial={reduce ? false : { pathLength: 0 }}
               whileInView={reduce ? undefined : { pathLength: 1 }}
-              viewport={{ once: true, amount: 0.6 }}
+              viewport={{ once: true, amount: 0.35 }}
               transition={{ duration: 0.7, ease: 'easeInOut', delay: 0.15 }}
             />
           </svg>

@@ -14,7 +14,7 @@ export function Reveal({
   y = 20,
   x = 0,
   delay = 0,
-  amount = 0.4,
+  amount = 0.2,
 }: {
   children: ReactNode
   className?: string

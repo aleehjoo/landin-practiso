@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 export function Problem() {
   const reduce = useReducedMotion()
   const chatRef = useRef<HTMLDivElement>(null)
-  const inView = useInView(chatRef, { once: true, amount: 0.3 })
+  const inView = useInView(chatRef, { once: true, amount: 0.15 })
   const [step, setStep] = useState(0)
 
   useEffect(() => {
@@ -114,7 +114,7 @@ export function Problem() {
         <motion.p
           initial={reduce ? false : { opacity: 0 }}
           whileInView={reduce ? undefined : { opacity: 1 }}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
           className="mx-auto mt-16 max-w-[22ch] text-center font-serif text-[clamp(24px,3.4vw,36px)] font-[440] italic leading-[1.3] text-ink"
         >
